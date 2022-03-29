@@ -1,0 +1,11 @@
+.error {
+  background: #94c6e7;
+}
+
+.txtError{
+  font-size: 75px;
+}
+
+.page-wrap {
+  min-height: 100vh;
+}

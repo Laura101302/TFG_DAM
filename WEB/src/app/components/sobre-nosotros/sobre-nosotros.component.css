@@ -1,0 +1,25 @@
+.about{
+  text-align: center;
+}
+
+p{
+  padding-left: 17vw;
+  padding-right: 17vw;
+}
+
+input, textarea{
+  margin: 5px;
+}
+
+.estrella{
+  font-size: 3em;
+  color: rgb(138, 226, 255);
+}
+
+.text-area{
+  height: 100px;
+}
+
+.div_img{
+  margin-top: 2em;
+}
