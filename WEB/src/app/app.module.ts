@@ -22,6 +22,8 @@ import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.
 import { SobreNosotrosComponent } from './components/sobre-nosotros/sobre-nosotros.component';
 import { AboutComponent } from './pages/about/about.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { MayoristasComponent } from './components/mayoristas/mayoristas.component';
+import { WholesalersComponent } from './pages/wholesalers/wholesalers.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
     SobreNosotrosComponent,
     AboutComponent,
     InicioComponent,
+    MayoristasComponent,
+    WholesalersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule, NgChartsModule, NgbModule],
   providers: [BookService, FaltasService],

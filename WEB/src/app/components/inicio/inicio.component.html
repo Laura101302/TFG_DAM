@@ -8,15 +8,52 @@
   </p>
   <div class="row g-1 botones">
     <div class="col-md">
-      <button type="button" class="btn btn-primary">Tienda de mayoristas</button>
+      <a href="mayoristas"><button type="button" class="btn btn-primary">Tienda de mayoristas</button></a>
     </div>
     <div class="col-md">
-      <button type="button" class="btn btn-primary">Tienda de particulares</button>
+      <a href="particulares"><button type="button" class="btn btn-primary">Tienda de particulares</button></a>
     </div>
   </div>
   <br>
-  <h3>Productos sugeridos de mayoristas</h3>
-  <div></div>
-  <h3>Productos sugeridos de minoristas</h3>
-  <div></div>
+  <div>
+    <h3>Algunos productos de mayoristas</h3>
+    <ngb-carousel *ngIf="images1" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images1[0]" alt="Primer producto" class="img-fluid">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images1[1]" alt="Segundo producto" class="img-fluid">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images1[2]" alt="Tercer producto" class="img-fluid">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <br>
+  <div>
+    <h3>Algunos productos de particulares</h3>
+    <ngb-carousel *ngIf="images2" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images2[0]" alt="Primer producto" class="img-fluid">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images2[1]" alt="Segundo producto" class="img-fluid">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images2[2]" alt="Tercer producto" class="img-fluid">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
 </div>
