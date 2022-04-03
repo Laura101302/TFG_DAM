@@ -11,8 +11,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookService } from './services/book.service';
 import { CreateBookComponent } from './components/create-book/create-book.component';
 import { NgChartsModule } from 'ng2-charts';
-import { LineChartComponent } from './components/line-chart/line-chart.component';
-import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { FaltasService } from './services/faltas.service';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { ErrorComponent } from './components/error/error.component';
@@ -33,8 +31,6 @@ import { WholesalersComponent } from './pages/wholesalers/wholesalers.component'
     InputFilterComponent,
     ListBooksComponent,
     CreateBookComponent,
-    LineChartComponent,
-    BarChartComponent,
     CabeceraComponent,
     ErrorComponent,
     PieComponent,

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MayoristasComponent implements OnInit {
 
+  images = ['altavoz', 'lampara', 'mesa', 'monitor', 'silla'].map((n) => `/assets/images/mayoristas/${n}.jpg`);
+
   constructor() { }
 
   ngOnInit(): void {
