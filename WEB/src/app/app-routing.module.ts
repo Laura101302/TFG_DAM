@@ -4,6 +4,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
+import { ProductMayoristaComponent } from './pages/product-mayorista/product-mayorista.component';
 import { WholesalersComponent } from './pages/wholesalers/wholesalers.component';
 
 const routes: Routes = [
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'mayoristas',
     component: WholesalersComponent,
+  },
+  {
+    path: 'mayoristas/productos/1',
+    component: ProductMayoristaComponent,
   },
   {
     path: 'sobre-nosotros',

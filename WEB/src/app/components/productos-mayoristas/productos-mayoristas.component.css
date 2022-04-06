@@ -1,0 +1,23 @@
+h2 {
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 1em;
+}
+
+.imagen {
+  width: 15em;
+}
+
+.producto {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.div_imagen {
+  margin-top: 2em;
+  /* padding-left: 10em; */
+}
+
+.div_producto {
+  margin-top: 2em;
+}
