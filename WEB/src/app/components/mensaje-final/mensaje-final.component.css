@@ -1,0 +1,11 @@
+.main{
+  background: rgb(186, 255, 202);
+}
+
+.txtHecho{
+  font-size: 75px;
+}
+
+.page-wrap {
+  min-height: 100vh;
+}
