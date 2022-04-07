@@ -5,6 +5,7 @@ import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.
 import { MensajeFinalComponent } from './components/mensaje-final/mensaje-final.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
+import { IndividualsComponent } from './pages/individuals/individuals.component';
 import { ProductMayoristaComponent } from './pages/product-mayorista/product-mayorista.component';
 import { WholesalersComponent } from './pages/wholesalers/wholesalers.component';
 
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'mayoristas/productos/1',
     component: ProductMayoristaComponent,
+  },
+  {
+    path: 'particulares',
+    component: IndividualsComponent,
   },
   {
     path: 'exito',

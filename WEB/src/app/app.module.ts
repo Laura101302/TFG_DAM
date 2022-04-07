@@ -25,6 +25,8 @@ import { WholesalersComponent } from './pages/wholesalers/wholesalers.component'
 import { ProductMayoristaComponent } from './pages/product-mayorista/product-mayorista.component';
 import { ProductosMayoristasComponent } from './components/productos-mayoristas/productos-mayoristas.component';
 import { MensajeFinalComponent } from './components/mensaje-final/mensaje-final.component';
+import { IndividualsComponent } from './pages/individuals/individuals.component';
+import { ParticularesComponent } from './components/particulares/particulares.component';
 
 
 @NgModule({
@@ -46,6 +48,8 @@ import { MensajeFinalComponent } from './components/mensaje-final/mensaje-final.
     ProductMayoristaComponent,
     ProductosMayoristasComponent,
     MensajeFinalComponent,
+    IndividualsComponent,
+    ParticularesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule, NgChartsModule, NgbModule],
   providers: [BookService, FaltasService],
