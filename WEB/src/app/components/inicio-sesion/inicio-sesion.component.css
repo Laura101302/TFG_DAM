@@ -1,3 +1,11 @@
-.formulario{
-  text-align: center;
+.main{
+  background-color: azure;
+}
+
+.txt{
+  font-size: 35px;
+}
+
+.page-wrap {
+  min-height: 100vh;
 }

@@ -1,20 +1,24 @@
-<div class="formulario">
-  <h2>Inicio de sesión</h2>
-    <form [formGroup]="login" (ngSubmit)="onSubmit()" class="row g-2 needs-validation" novalidate>
-    <div class="col-md-6">
-      <label for="correo" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control" id="correo" formControlName="correo" required>
-      <div class="invalid-feedback">Correo incorrecto</div>
-    </div>
-    <div class="col-md-6">
-      <label for="contra" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="contra" formControlName="contra" required>
-      <div class="invalid-feedback">Contraseña incorrecta</div>
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-dark">Iniciar sesión</button>
-    </div>
-  </form>
-  <br>
-  <div *ngIf="this.isOk != null">{{ this.isOk ? "Inicio de sesión correcto. Redirigiendo a la página principal" : "El correo y/o la contraseña no son correctos" }}</div>
+<div class="page-wrap d-flex flex-row align-items-center main">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+              <span class="txt">Iniciar sesión en la cuenta</span>
+              <div class="mb-4 lead">
+                <form [formGroup]="login" (ngSubmit)="onSubmit()" class="row g-2 needs-validation" novalidate>
+                  <label for="correo" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="correo" formControlName="correo" required>
+                  <div class="invalid-feedback">Correo incorrecto</div>
+                  <label for="contra" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="contra" formControlName="contra" required>
+                  <div class="invalid-feedback">Contraseña incorrecta</div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-dark">Iniciar sesión</button>
+                  </div>
+                </form>
+                <br>
+                <div *ngIf="this.isOk != null">{{ this.isOk ? "Inicio de sesión correcto. Redirigiendo a la página principal" : "El correo y/o la contraseña no son correctos" }}</div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
