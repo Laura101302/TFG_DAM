@@ -1,0 +1,25 @@
+.producto {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.imagen {
+  width: 15em;
+}
+
+.div_imagen {
+  margin-top: 2em;
+}
+
+.div_producto {
+  margin-top: 2em;
+}
+
+.div_producto h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.vendedor{
+  text-align: center;
+}

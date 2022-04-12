@@ -27,6 +27,8 @@ import { ProductosMayoristasComponent } from './components/productos-mayoristas/
 import { MensajeFinalComponent } from './components/mensaje-final/mensaje-final.component';
 import { IndividualsComponent } from './pages/individuals/individuals.component';
 import { ParticularesComponent } from './components/particulares/particulares.component';
+import { ProductosParticularesComponent } from './components/productos-particulares/productos-particulares.component';
+import { ProductParticularComponent } from './pages/product-particular/product-particular.component';
 
 
 @NgModule({
@@ -50,6 +52,8 @@ import { ParticularesComponent } from './components/particulares/particulares.co
     MensajeFinalComponent,
     IndividualsComponent,
     ParticularesComponent,
+    ProductosParticularesComponent,
+    ProductParticularComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule, NgChartsModule, NgbModule],
   providers: [BookService, FaltasService],

@@ -7,6 +7,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
 import { IndividualsComponent } from './pages/individuals/individuals.component';
 import { ProductMayoristaComponent } from './pages/product-mayorista/product-mayorista.component';
+import { ProductParticularComponent } from './pages/product-particular/product-particular.component';
 import { WholesalersComponent } from './pages/wholesalers/wholesalers.component';
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'particulares',
     component: IndividualsComponent,
+  },
+  {
+    path: 'particulares/productos/1',
+    component: ProductParticularComponent,
   },
   {
     path: 'exito',
