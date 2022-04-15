@@ -29,6 +29,7 @@ import { IndividualsComponent } from './pages/individuals/individuals.component'
 import { ParticularesComponent } from './components/particulares/particulares.component';
 import { ProductosParticularesComponent } from './components/productos-particulares/productos-particulares.component';
 import { ProductParticularComponent } from './pages/product-particular/product-particular.component';
+import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { ProductParticularComponent } from './pages/product-particular/product-p
     ParticularesComponent,
     ProductosParticularesComponent,
     ProductParticularComponent,
+    RegistroUsuarioComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule, NgChartsModule, NgbModule],
   providers: [BookService, FaltasService],

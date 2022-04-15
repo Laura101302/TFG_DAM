@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './components/error/error.component';
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
 import { MensajeFinalComponent } from './components/mensaje-final/mensaje-final.component';
+import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
 import { IndividualsComponent } from './pages/individuals/individuals.component';
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'sign-in',
     component: InicioSesionComponent,
+  },
+  {
+    path: 'sign-up',
+    component: RegistroUsuarioComponent,
   },
   {
     path: '**',

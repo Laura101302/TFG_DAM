@@ -1,0 +1,17 @@
+.volver{
+  padding: 20px;
+}
+
+.main{
+  background-color: azure;
+}
+
+.txt{
+  font-size: 35px;
+}
+
+.page-wrap {
+  min-height: 100vh;
+}
+
+/*display flex en los campos del formulario*/
