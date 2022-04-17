@@ -1,7 +1,5 @@
 <ng-container *ngFor="let book of books">
-  <section
-    *ngIf="book.name?.toUpperCase()?.includes(filter?.toUpperCase() ?? '')"
-  >
+  <section *ngIf="book.name?.toUpperCase()?.includes(filter?.toUpperCase() ?? '')">
 
   <table>
     <tr>
@@ -19,7 +17,6 @@
       <td><input type="button" value="+" (click)="like()" /></td>
     </tr>
     </table>
-
 
   </section>
 </ng-container>

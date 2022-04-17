@@ -1,5 +1,9 @@
 .pie{
-  background-color: rgb(221, 245, 253);
+  background-color: rgb(0, 77, 102);
+}
+
+.pie span{
+  color: white;
 }
 
 .icon{
@@ -9,4 +13,5 @@
 
 .contacto{
   text-align: center;
+  color: white;
 }

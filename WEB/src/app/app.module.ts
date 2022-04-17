@@ -59,6 +59,7 @@ import { RegistroUsuarioComponent } from './components/registro-usuario/registro
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule, NgChartsModule, NgbModule],
   providers: [BookService, FaltasService],
+  exports: [CabeceraComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

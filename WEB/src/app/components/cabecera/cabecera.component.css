@@ -1,3 +1,9 @@
 .cabecera{
-  background-color: rgb(221, 245, 253);
+  padding: 1.3vw;
+  /* background-color: rgb(221, 245, 253); */
+  background-color: rgb(0, 77, 102);
+}
+
+.cabecera a{
+  color: white;
 }

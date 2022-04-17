@@ -1,8 +1,13 @@
 .inicio{
   text-align: center;
+  background-color: rgb(227, 236, 255);
 }
 
 .botones{
-  padding-left: 25vw;
-  padding-right: 25vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+.carousel img{
+  border-radius:7px;
 }
