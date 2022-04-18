@@ -3,6 +3,10 @@
   background-color: rgb(227, 236, 255);
 }
 
+.logo{
+  height: 250px;
+}
+
 p{
   padding-left: 17vw;
   padding-right: 17vw;
@@ -23,4 +27,14 @@ input, textarea{
 
 .div_img{
   margin-top: 2em;
+}
+
+.opiniones article{
+  border: 1px solid rgb(28, 198, 255);
+  margin: 10px 50px 10px 50px; /*arriba izquierda abajo derecha*/
+}
+
+.opiniones .nombre{
+  font-weight: bold;
+  font-size: 20px;
 }
