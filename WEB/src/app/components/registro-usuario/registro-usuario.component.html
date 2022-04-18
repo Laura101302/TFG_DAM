@@ -1,4 +1,4 @@
-<div class="page-wrap d-flex flex-row align-items-center main">
+<!-- <div class="page-wrap d-flex flex-row align-items-center main">
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-12 text-center">
@@ -46,5 +46,24 @@
               </div>
           </div>
       </div>
+  </div>
+</div> -->
+
+<div class="main">
+  <div class="forms-wrapper">
+    <form class="signin-form">
+      <a href="/" class="volver">Volver</a>
+      <span>Crear cuenta</span>
+      <div class="inputs-wrapper">
+        <input type="text" id="nombre" placeholder="Nombre completo" formControlName="nombre" required>
+        <input type="email" id="correo" placeholder="Correo electrónico" formControlName="correo" required>
+        <input type="password" id="contra" placeholder="Contraseña" formControlName="contra" required>
+        <input type="password" id="bispass" placeholder="Repita la contraseña" formControlName="bispass" required>
+        <input type="submit" class="botones" value="Crear cuenta">
+        <br>
+        <p>¿Ya tienes cuenta? ¡Inicia sesión!</p>
+        <a href="sign-in"><input type="button" class="botones" value="Iniciar sesión"></a>
+      </div>
+    </form>
   </div>
 </div>

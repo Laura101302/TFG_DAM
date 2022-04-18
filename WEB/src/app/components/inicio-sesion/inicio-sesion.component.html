@@ -1,33 +1,41 @@
-<div class="page-wrap d-flex flex-row align-items-center main">
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-md-12 text-center">
-              <span class="txt">Iniciar sesión en la cuenta</span>
-              <div class="mb-4 lead">
-                <form [formGroup]="login" (ngSubmit)="onSubmit()" class="row g-2 needs-validation" novalidate>
-                  <label for="correo" class="form-label">Correo electrónico</label>
-                  <input type="email" class="form-control" id="correo" formControlName="correo" required>
-                  <div class="invalid-feedback">Correo incorrecto</div>
-                  <label for="contra" class="form-label">Contraseña</label>
-                  <input type="password" class="form-control" id="contra" formControlName="contra" required>
-                  <div class="invalid-feedback">Contraseña incorrecta</div>
-                  <div class="col-12">
-                    <button type="submit" class="btn btn-dark">Iniciar sesión</button>
-                  </div>
-                  <div>
-                    <br>
-                    <p>¿Aún no tienes cuenta? ¡Crea una ahora!</p>
-                    <a href="sign-up"><button type="button" class="btn btn-dark">Crear cuenta</button></a>
-                  </div>
-                  <div class="col-12">
-                    <br>
-                    <a href="/"><button type="button" class="btn btn-dark">Volver al inicio</button></a>
-                  </div>
-                </form>
-                <br>
-                <div *ngIf="this.isOk != null">{{ this.isOk ? "Inicio de sesión correcto. Redirigiendo a la página principal" : "El correo y/o la contraseña no son correctos" }}</div>
-              </div>
-          </div>
+<!-- <div class="container">
+  <div class="forms-wrapper">
+    <form [formGroup]="login" (ngSubmit)="onSubmit()" class="row g-2 needs-validation formulario" novalidate>
+      <span class="txt">Iniciar sesión en la cuenta</span>
+      <div class="inputs-wrapper">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" formControlName="correo" required>
+        <label for="contra">Contraseña</label>
+        <input type="password" id="contra" formControlName="contra" required>
+        <div>
+          <button type="submit" class="botones">Iniciar sesión</button>
+        </div>
+        <div>
+          <p>¿Aún no tienes cuenta? ¡Crea una ahora!</p>
+          <a href="sign-up"><button type="button" class="botones">Crear cuenta</button></a>
+        </div>
+        <div>
+          <a href="/"><button type="button" class="botones">Volver al inicio</button></a>
+        </div>
       </div>
+    </form>
+    <div *ngIf="this.isOk != null">{{ this.isOk ? "Inicio de sesión correcto. Redirigiendo a la página principal" : "El correo y/o la contraseña no son correctos" }}</div>
+  </div>
+</div> -->
+
+<div class="main">
+  <div class="forms-wrapper">
+    <form class="signin-form">
+      <a href="/" class="volver">Volver</a>
+      <span>Iniciar sesión</span>
+      <div class="inputs-wrapper">
+        <input type="email" id="correo" placeholder="Correo electrónico" formControlName="correo" required>
+        <input type="password" id="contra" placeholder="Contraseña" formControlName="contra" required>
+        <input type="submit" class="botones" value="Iniciar sesión">
+        <br>
+        <p>¿Aún no tienes cuenta? ¡Crea una ahora!</p>
+        <a href="sign-up"><input type="button" class="botones" value="Crear cuenta"></a>
+      </div>
+    </form>
   </div>
 </div>

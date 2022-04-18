@@ -1,17 +1,93 @@
-.volver{
-  padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
 }
 
-.main{
-  background-color: azure;
+.main {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh; /*Ocupa toda la ventana en vertical*/
+  background: linear-gradient(rgba(31, 7, 7, .7), rgba(0, 0, 0, 0.7)),
+  url(/assets/images/otros/fondo-login.jpg) center no-repeat;
+  background-size: cover;
+  perspective: 100rem;
 }
 
-.txt{
-  font-size: 35px;
+.forms-wrapper {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: calc(50% - 17.5rem);
+  left: calc(50% - 25rem);
+  transform: rotateY(10deg);
+  transition: transform 0.5s, left 0.5s;
 }
 
-.page-wrap {
-  min-height: 100vh;
+form {
+  width: 50rem;
+  height: 35rem;
+  background-color: rgba(0, 52, 73, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
 }
 
-/*display flex en los campos del formulario*/
+.volver {
+  position: absolute;
+  top: 2rem;
+  background-color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(40, 114, 108, .85);
+  letter-spacing: 0.2rem;
+  left: 2rem;
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  border-radius: 100% 0.5rem 0.5rem 100%;
+}
+
+form span {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+
+.inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-wrapper input {
+  width: 25rem;
+  height: 3rem;
+  padding: .5rem 1rem;
+  margin: 0.5rem 0;
+  background-color: transparent;
+  border: .1rem solid white;
+  border-radius: 5rem;
+  color: #fff;
+  letter-spacing: .1rem;
+  /* Quita el foco del borde*/
+  outline: none;
+}
+
+.inputs-wrapper input::placeholder {
+  color:#fff;
+  font-weight: 300;
+}
+
+.inputs-wrapper .botones {
+  background-color: white;
+  color: rgba(40, 114, 108, 0.9);
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.inputs-wrapper p{
+  text-align: center;
+  color: #fff;
+}
