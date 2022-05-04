@@ -7,5 +7,5 @@ CREATE TABLE ProductosParticulares(
     Imagen VARCHAR(100),
     DNI_Vendedor VARCHAR(9),
     CONSTRAINT PK_ProductosParticulares PRIMARY KEY(ID),
-    CONSTRAINT FK_ProductosParticulares FOREIGN KEY(DNI_Vendedor) REFERENCES VendedorParticular(DNI),
+    CONSTRAINT FK_ProductosParticulares FOREIGN KEY(DNI_Vendedor) REFERENCES VendedoresParticulares(DNI),
 );
