@@ -17,34 +17,34 @@
             </summary>
             <returns>Devuelve una lista <see cref="T:OpinionDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.OpinionesController.Get(System.String)">
+        <member name="M:Api.Controllers.OpinionesController.Get(System.Int32)">
             <summary>
             Devuelve una opinion por el email
             </summary>
-            <param name="CorreoElectronico">El email de la opinion</param>
+            <param name="ID">El email de la opinion</param>
             <returns>Devuelve una opinion <see cref="T:OpinionDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.OpinionesController.Delete(System.String)">
+        <member name="M:Api.Controllers.OpinionesController.Delete(System.Int32)">
             <summary>
-            it deletes a opinion
+            Borra una opinion
             </summary>
-            <param name="CorreoElectronico">the email of the opinion that is going to be deleted</param>
-            <returns>Returns the deleted opinion <see cref="T:OpinionDTO"/></returns>
+            <param name="ID">El email de la opinion que se va a borrar</param>
+            <returns>Devuelve la opinion borrada <see cref="T:OpinionDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.OpinionesController.Post(BaseOpinionDTO)">
             <summary>
-            It creates a opinion
+            Crea una opinion
             </summary>
-            <param name="baseOpinion">the created opinion <see cref="T:BaseOpinionDTO"/></param>
-            <returns>Returns the created opinion <see cref="T:OpinionDTO"/></returns>
+            <param name="baseOpinion">La opinion creada <see cref="T:BaseOpinionDTO"/></param>
+            <returns>Devuelve la opinion creada <see cref="T:OpinionDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.OpinionesController.Put(BaseOpinionDTO,System.String)">
+        <member name="M:Api.Controllers.OpinionesController.Put(BaseOpinionDTO,System.Int32)">
             <summary>
-            it modifies a opinion
+            Modifica una opinion
             </summary>
-            <param name="baseOpinion">the created opinion <see cref="T:BaseOpinionDTO"/></param>
-            <param name="CorreoElectronico">the email of the modified opinion</param>
-            <returns>Returns the modified opinion <see cref="T:OpinionDTO"/></returns>
+            <param name="baseOpinion">La opinion modificada <see cref="T:BaseOpinionDTO"/></param>
+            <param name="ID">El email de la opinion modificada</param>
+            <returns>Devuelve la opinion modificada <see cref="T:OpinionDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PMayoristasController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.PMayoristasController},IPMayoristaService)">
             <summary>
@@ -143,18 +143,18 @@
             </summary>
             <returns>Returns a list of <see cref="T:UsuarioDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.UsuariosController.Get(System.String)">
+        <member name="M:Api.Controllers.UsuariosController.Get(System.Int32)">
             <summary>
             It returns a usuario by id 
             </summary>
-            <param name="CorreoElectronico">the email of the usuario</param>
+            <param name="ID">the email of the usuario</param>
             <returns>Returns a usuario <see cref="T:UsuarioDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.UsuariosController.Delete(System.String)">
+        <member name="M:Api.Controllers.UsuariosController.Delete(System.Int32)">
             <summary>
             it deletes a usuario
             </summary>
-            <param name="CorreoElectronico">the email of the usuario that is going to be deleted</param>
+            <param name="ID">the email of the usuario that is going to be deleted</param>
             <returns>Returns the deleted usuario <see cref="T:UsuarioDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.UsuariosController.Post(BaseUsuarioDTO)">
@@ -164,12 +164,12 @@
             <param name="baseUsuario">the created usuario <see cref="T:BaseUsuarioDTO"/></param>
             <returns>Returns the created usuario <see cref="T:UsuarioDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.UsuariosController.Put(BaseUsuarioDTO,System.String)">
+        <member name="M:Api.Controllers.UsuariosController.Put(BaseUsuarioDTO,System.Int32)">
             <summary>
             it modifies a usuario
             </summary>
             <param name="baseUsuario">the created usuario <see cref="T:BaseUsuarioDTO"/></param>
-            <param name="CorreoElectronico">the email of the modified usuario</param>
+            <param name="ID">the email of the modified usuario</param>
             <returns>Returns the modified usuario <see cref="T:UsuarioDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.VParticularesController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.VParticularesController},IVParticularService)">
@@ -185,18 +185,18 @@
             </summary>
             <returns>Returns a list of <see cref="T:VParticularDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.VParticularesController.Get(System.String)">
+        <member name="M:Api.Controllers.VParticularesController.Get(System.Int32)">
             <summary>
             It returns a vparticular by id 
             </summary>
-            <param name="DNI">the dni of the vparticular</param>
+            <param name="ID">the dni of the vparticular</param>
             <returns>Returns a vparticular <see cref="T:VParticularDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.VParticularesController.Delete(System.String)">
+        <member name="M:Api.Controllers.VParticularesController.Delete(System.Int32)">
             <summary>
             it deletes a vparticular
             </summary>
-            <param name="DNI">the dni of the vparticular that is going to be deleted</param>
+            <param name="ID">the dni of the vparticular that is going to be deleted</param>
             <returns>Returns the deleted vparticular <see cref="T:VParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.VParticularesController.Post(BaseVParticularDTO)">
@@ -206,12 +206,12 @@
             <param name="baseVParticular">the created vparticular <see cref="T:BaseVParticularDTO"/></param>
             <returns>Returns the created vparticular <see cref="T:VParticularDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.VParticularesController.Put(BaseVParticularDTO,System.String)">
+        <member name="M:Api.Controllers.VParticularesController.Put(BaseVParticularDTO,System.Int32)">
             <summary>
             it modifies a vparticular
             </summary>
             <param name="baseVParticular">the created vparticular <see cref="T:BaseVParticularDTO"/></param>
-            <param name="DNI">the dni of the modified vparticular</param>
+            <param name="ID">the dni of the modified vparticular</param>
             <returns>Returns the modified vparticular <see cref="T:VParticularDTO"/></returns>
         </member>
         <member name="T:IOpinionService">

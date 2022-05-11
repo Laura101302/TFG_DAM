@@ -9,5 +9,5 @@ public class UsuarioDTO : BaseUsuarioDTO
     }
 
 
-    public string CorreoElectronico { get; set; }
+    public int ID { get; set; }
 }

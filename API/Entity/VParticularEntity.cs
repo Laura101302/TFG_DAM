@@ -11,5 +11,6 @@ public class VParticularEntity
     public string Informacion { get; set; }
     [MaxLength(9)]
     public string DNI { get; set; }
+    public int ID { get; set; }
 
 }

@@ -35,14 +35,14 @@ public class VParticularesController : ControllerBase
     /// <summary>
     /// It returns a vparticular by id 
     /// </summary>
-    /// <param name="DNI">the dni of the vparticular</param>
+    /// <param name="ID">the dni of the vparticular</param>
     /// <returns>Returns a vparticular <see cref="VParticularDTO"/></returns>
-    [HttpGet("{DNI}")]
+    [HttpGet("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public ActionResult<VParticularDTO> Get(string DNI)
+    public ActionResult<VParticularDTO> Get(int ID)
     {
-        VParticularDTO result = _vparticularService.GetByDNI(DNI);
+        VParticularDTO result = _vparticularService.GetByID(ID);
 
         if (result == null)
             return NotFound();
@@ -55,19 +55,19 @@ public class VParticularesController : ControllerBase
     /// <summary>
     /// it deletes a vparticular
     /// </summary>
-    /// <param name="DNI">the dni of the vparticular that is going to be deleted</param>
+    /// <param name="ID">the dni of the vparticular that is going to be deleted</param>
     /// <returns>Returns the deleted vparticular <see cref="VParticularDTO"/></returns>
-    [HttpDelete("{DNI}")]
+    [HttpDelete("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public ActionResult<VParticularDTO> Delete(string DNI)
+    public ActionResult<VParticularDTO> Delete(int ID)
     {
-        VParticularDTO result = _vparticularService.GetByDNI(DNI);
+        VParticularDTO result = _vparticularService.GetByID(ID);
 
         if (result == null)
             return NotFound();
 
-        _vparticularService.Delete(DNI);
+        _vparticularService.Delete(ID);
 
         return Ok(result);
 
@@ -91,14 +91,14 @@ public class VParticularesController : ControllerBase
     /// it modifies a vparticular
     /// </summary>
     /// <param name="baseVParticular">the created vparticular <see cref="BaseVParticularDTO"/></param>
-    /// <param name="DNI">the dni of the modified vparticular</param>
+    /// <param name="ID">the dni of the modified vparticular</param>
     /// <returns>Returns the modified vparticular <see cref="VParticularDTO"/></returns>
-    [HttpPut("{DNI}")]
+    [HttpPut("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
-    public ActionResult<VParticularDTO> Put([FromBody] BaseVParticularDTO baseVParticular, string DNI)
+    public ActionResult<VParticularDTO> Put([FromBody] BaseVParticularDTO baseVParticular, int ID)
     {
 
-        return Ok(_vparticularService.Modify(baseVParticular, DNI));
+        return Ok(_vparticularService.Modify(baseVParticular, ID));
     }
 
 }

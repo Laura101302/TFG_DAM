@@ -9,5 +9,5 @@ public class OpinionDTO : BaseOpinionDTO
     }
 
 
-    public string CorreoElectronico { get; set; }
+    public int ID { get; set; }
 }

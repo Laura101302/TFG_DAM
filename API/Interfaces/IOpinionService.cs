@@ -8,11 +8,11 @@ public interface IOpinionService
 {
     public IEnumerable<OpinionDTO> GetAll();
 
-    public OpinionDTO GetByEmail(string correo);
+    public OpinionDTO GetByID(int guid);
 
-    public OpinionDTO Add(BaseOpinionDTO correo);
+    public OpinionDTO Add(BaseOpinionDTO guid);
 
-    public void Delete(string correo);
+    public void Delete(int guid);
 
-    public OpinionDTO Modify(BaseOpinionDTO opinion, string correo);
+    public OpinionDTO Modify(BaseOpinionDTO opinion, int guid);
 }

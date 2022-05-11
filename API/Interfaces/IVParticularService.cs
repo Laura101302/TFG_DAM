@@ -8,11 +8,11 @@ public interface IVParticularService
 {
     public IEnumerable<VParticularDTO> GetAll();
 
-    public VParticularDTO GetByDNI(string dni);
+    public VParticularDTO GetByID(int guid);
 
-    public VParticularDTO Add(BaseVParticularDTO dni);
+    public VParticularDTO Add(BaseVParticularDTO guid);
 
-    public void Delete(string dni);
+    public void Delete(int guid);
 
-    public VParticularDTO Modify(BaseVParticularDTO vparticular, string dni);
+    public VParticularDTO Modify(BaseVParticularDTO vparticular, int guid);
 }

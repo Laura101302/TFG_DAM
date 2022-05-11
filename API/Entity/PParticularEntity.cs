@@ -7,7 +7,6 @@ public class PParticularEntity
 
     [MaxLength(100)]
     public string Nombre { get; set; }
-    [MaxLength(6)]
     public decimal Precio { get; set; }
     [MaxLength(100)]
     public string Descripcion { get; set; }

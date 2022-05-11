@@ -8,4 +8,5 @@ public class BaseOpinionDTO
     public string Telefono { get; set; }
     public string Comentario { get; set; }
     public string Calificacion { get; set; }
+    public string CorreoElectronico { get; set; }
 }

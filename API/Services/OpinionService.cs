@@ -20,12 +20,12 @@ public class OpinionService : IOpinionService
         return _mapper.Map<OpinionDTO>(entityAdded);
     }
 
-    public void Delete(string correo)
+    public void Delete(int guid)
     {
-        OpinionEntity opinion = _context.Opiniones.FirstOrDefault(x => x.CorreoElectronico == correo);
+        OpinionEntity opinion = _context.Opiniones.FirstOrDefault(x => x.ID == guid);
 
         if (opinion == null)
-            throw new ApplicationException($"Opinion with email {correo} not found");
+            throw new ApplicationException($"Opinion with email {guid} not found");
 
         _context.Opiniones.Remove(opinion);
         _context.SaveChanges();
@@ -36,17 +36,17 @@ public class OpinionService : IOpinionService
         return _mapper.Map<IEnumerable<OpinionDTO>>(_context.Opiniones.Select(x => x));
     }
 
-    public OpinionDTO GetByEmail(string correo)
+    public OpinionDTO GetByID(int guid)
     {
-        return _mapper.Map<OpinionDTO>(_context.Opiniones.FirstOrDefault(x => x.CorreoElectronico == correo));
+        return _mapper.Map<OpinionDTO>(_context.Opiniones.FirstOrDefault(x => x.ID == guid));
     }
 
-    public OpinionDTO Modify(BaseOpinionDTO opinion, string correo)
+    public OpinionDTO Modify(BaseOpinionDTO opinion, int guid)
     {
         var _mappedOpinion = _mapper.Map<OpinionEntity>(opinion);
-        _mappedOpinion.CorreoElectronico = correo;
+        _mappedOpinion.ID = guid;
 
-        OpinionEntity modifiedOpinion = _context.Opiniones.FirstOrDefault(x => x.CorreoElectronico == correo);
+        OpinionEntity modifiedOpinion = _context.Opiniones.FirstOrDefault(x => x.ID == guid);
 
         if (modifiedOpinion == null)
             return null;

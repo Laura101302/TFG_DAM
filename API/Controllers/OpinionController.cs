@@ -35,14 +35,14 @@ public class OpinionesController : ControllerBase
     /// <summary>
     /// Devuelve una opinion por el email
     /// </summary>
-    /// <param name="CorreoElectronico">El email de la opinion</param>
+    /// <param name="ID">El email de la opinion</param>
     /// <returns>Devuelve una opinion <see cref="OpinionDTO"/></returns>
-    [HttpGet("{CorreoElectronico}")]
+    [HttpGet("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public ActionResult<OpinionDTO> Get(string CorreoElectronico)
+    public ActionResult<OpinionDTO> Get(int ID)
     {
-        OpinionDTO result = _opinionService.GetByEmail(CorreoElectronico);
+        OpinionDTO result = _opinionService.GetByID(ID);
 
         if (result == null)
             return NotFound();
@@ -55,19 +55,19 @@ public class OpinionesController : ControllerBase
     /// <summary>
     /// Borra una opinion
     /// </summary>
-    /// <param name="CorreoElectronico">El email de la opinion que se va a borrar</param>
+    /// <param name="ID">El email de la opinion que se va a borrar</param>
     /// <returns>Devuelve la opinion borrada <see cref="OpinionDTO"/></returns>
-    [HttpDelete("{CorreoElectronico}")]
+    [HttpDelete("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public ActionResult<OpinionDTO> Delete(string CorreoElectronico)
+    public ActionResult<OpinionDTO> Delete(int ID)
     {
-        OpinionDTO result = _opinionService.GetByEmail(CorreoElectronico);
+        OpinionDTO result = _opinionService.GetByID(ID);
 
         if (result == null)
             return NotFound();
 
-        _opinionService.Delete(CorreoElectronico);
+        _opinionService.Delete(ID);
 
         return Ok(result);
 
@@ -91,15 +91,14 @@ public class OpinionesController : ControllerBase
     /// Modifica una opinion
     /// </summary>
     /// <param name="baseOpinion">La opinion modificada <see cref="BaseOpinionDTO"/></param>
-    /// <param name="CorreoElectronico">El email de la opinion modificada</param>
+    /// <param name="ID">El email de la opinion modificada</param>
     /// <returns>Devuelve la opinion modificada <see cref="OpinionDTO"/></returns>
-    [HttpPut("{CorreoElectronico}")]
+    [HttpPut("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]
-    public ActionResult<OpinionDTO> Put([FromBody] BaseOpinionDTO baseOpinion, string CorreoElectronico)
+    public ActionResult<OpinionDTO> Put([FromBody] BaseOpinionDTO baseOpinion, int ID)
     {
 
-        return Ok(_opinionService.Modify(baseOpinion, CorreoElectronico));
+        return Ok(_opinionService.Modify(baseOpinion, ID));
     }
-    /*Hecho*/
 
 }

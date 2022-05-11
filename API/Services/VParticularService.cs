@@ -20,12 +20,12 @@ public class VParticularService : IVParticularService
         return _mapper.Map<VParticularDTO>(entityAdded);
     }
 
-    public void Delete(string dni)
+    public void Delete(int guid)
     {
-        VParticularEntity vparticular = _context.VParticulares.FirstOrDefault(x => x.DNI == dni);
+        VParticularEntity vparticular = _context.VParticulares.FirstOrDefault(x => x.ID == guid);
 
         if (vparticular == null)
-            throw new ApplicationException($"VParticular with dni {dni} not found");
+            throw new ApplicationException($"VParticular with guid {guid} not found");
 
         _context.VParticulares.Remove(vparticular);
         _context.SaveChanges();
@@ -36,17 +36,17 @@ public class VParticularService : IVParticularService
         return _mapper.Map<IEnumerable<VParticularDTO>>(_context.VParticulares.Select(x => x));
     }
 
-    public VParticularDTO GetByDNI(string dni)
+    public VParticularDTO GetByID(int guid)
     {
-        return _mapper.Map<VParticularDTO>(_context.VParticulares.FirstOrDefault(x => x.DNI == dni));
+        return _mapper.Map<VParticularDTO>(_context.VParticulares.FirstOrDefault(x => x.ID == guid));
     }
 
-    public VParticularDTO Modify(BaseVParticularDTO vparticular, string dni)
+    public VParticularDTO Modify(BaseVParticularDTO vparticular, int guid)
     {
         var _mappedVParticular = _mapper.Map<VParticularEntity>(vparticular);
-        _mappedVParticular.DNI = dni;
+        _mappedVParticular.ID = guid;
 
-        VParticularEntity modifiedVParticular = _context.VParticulares.FirstOrDefault(x => x.DNI == dni);
+        VParticularEntity modifiedVParticular = _context.VParticulares.FirstOrDefault(x => x.ID == guid);
 
         if (modifiedVParticular == null)
             return null;

@@ -16,5 +16,6 @@ public class OpinionEntity
     public string Calificacion { get; set; }
     [MaxLength(50)]
     public string CorreoElectronico { get; set; }
+    public int ID { get; set; }
 
 }

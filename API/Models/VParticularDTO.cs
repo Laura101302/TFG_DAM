@@ -9,5 +9,5 @@ public class VParticularDTO : BaseVParticularDTO
     }
 
 
-    public string DNI { get; set; }
+    public int ID { get; set; }
 }
