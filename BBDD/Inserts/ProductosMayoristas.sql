@@ -1,7 +1,7 @@
-use PruebasPopZone;
-insert into ProductosMayoristas values(
-    'producto1',
-    1.20,
-    'producto numero 1',
-    'imagen'
+USE PopZone;
+INSERT INTO ProductosMayoristas VALUES(
+    'Altavoz',
+    120,
+    'Altavoz negro con luces',
+    './WEB/src/assets/images/mayoristas/altavoz.jpg'
 )

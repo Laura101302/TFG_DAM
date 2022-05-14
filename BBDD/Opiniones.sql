@@ -6,6 +6,6 @@ CREATE TABLE Opiniones(
     Telefono VARCHAR(12),
     CorreoElectronico VARCHAR(50),
     Comentario VARCHAR(200),
-    Calificacion VARCHAR(max),
+    Calificacion INTEGER,
     CONSTRAINT PK_Opiniones PRIMARY KEY(ID),
 );
