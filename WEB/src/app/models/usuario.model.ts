@@ -1,16 +1,16 @@
 export class Usuario {
   id: number;
 
-  nombrecompleto: string | null;
+  nombreCompleto: string;
 
   contrasena: string | null;
 
-  correoelectronico: string | null;
+  correoElectronico: string | null;
 
   constructor() {
     this.id = 0;
-    this.nombrecompleto = null;
+    this.nombreCompleto = "";
     this.contrasena = null;
-    this.correoelectronico = null;
+    this.correoElectronico = null;
   }
 }

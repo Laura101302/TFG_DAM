@@ -6,16 +6,18 @@ import { Usuario } from '../models/usuario.model';
 
 @Injectable()
 export class UsuarioService {
+
   constructor(private http: HttpClient) {}
-  getUsuarioData() : Observable<Usuario[]> {
-    return this.http.get<Usuario[]>(environment.API_URL + 'usuarios');
+
+  getUsuarioData(correo: String) : Observable<Usuario> {
+    return this.http.get<Usuario>(environment.API_URL + 'usuarios/'+correo);
   }
 
   postUsuarioData(body : any) : Usuario {
     let bodyData =new Usuario();
-    bodyData.nombrecompleto=body.usuarioNombreCompleto;
-    bodyData.contrasena=body.usuarioContrasena;
-    bodyData.correoelectronico=body.usuarioCorreoElectronico;
+    bodyData.nombreCompleto=body.nombre;
+    bodyData.contrasena=body.contra;
+    bodyData.correoElectronico=body.correo;
 
 
     let result =new Usuario();

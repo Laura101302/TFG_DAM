@@ -19,7 +19,9 @@
           <a class="nav-link" href="sobre-nosotros">Sobre Nosotros</a>
         </li>
       </ul>
-      <a href="sign-in"><button type="button" class="btn btn-outline-light">Iniciar sesión</button></a>
+      <a href="sign-in"><button type="button" class="btn btn-outline-light" *ngIf="!isLogged">Iniciar sesión</button></a>
+      <span>{{ nombre }}</span>
+      <button type="button" class="btn btn-outline-light" *ngIf="isLogged" (click)="cerrarSesion()">Cerrar sesión</button>
     </div>
   </div>
 </nav>

@@ -30,6 +30,7 @@ import { PMayoristaService } from './services/pmayorista.service';
 import { PParticularService } from './services/pparticular.service';
 import { UsuarioService } from './services/usuario.service';
 import { VParticularService } from './services/vparticular.service';
+import { cookieHelper } from './helper/cookiehelper';
 
 
 @NgModule({
@@ -55,7 +56,7 @@ import { VParticularService } from './services/vparticular.service';
     RegistroUsuarioComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule, NgChartsModule, NgbModule],
-  providers: [OpinionService, PMayoristaService, PParticularService, UsuarioService, VParticularService],
+  providers: [OpinionService, PMayoristaService, PParticularService, UsuarioService, VParticularService, cookieHelper],
   exports: [CabeceraComponent],
   bootstrap: [AppComponent],
 })

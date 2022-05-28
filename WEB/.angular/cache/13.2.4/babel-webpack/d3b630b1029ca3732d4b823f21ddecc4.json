@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class VParticular {\n  constructor() {\n    this.id = 0;\n    this.nombrecompleto = null;\n    this.informacion = null;\n    this.dni = null;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

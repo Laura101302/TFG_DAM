@@ -1,31 +1,6 @@
-<!-- <div class="container">
-  <div class="forms-wrapper">
-    <form [formGroup]="login" (ngSubmit)="onSubmit()" class="row g-2 needs-validation formulario" novalidate>
-      <span class="txt">Iniciar sesión en la cuenta</span>
-      <div class="inputs-wrapper">
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" formControlName="correo" required>
-        <label for="contra">Contraseña</label>
-        <input type="password" id="contra" formControlName="contra" required>
-        <div>
-          <button type="submit" class="botones">Iniciar sesión</button>
-        </div>
-        <div>
-          <p>¿Aún no tienes cuenta? ¡Crea una ahora!</p>
-          <a href="sign-up"><button type="button" class="botones">Crear cuenta</button></a>
-        </div>
-        <div>
-          <a href="/"><button type="button" class="botones">Volver al inicio</button></a>
-        </div>
-      </div>
-    </form>
-    <div *ngIf="this.isOk != null">{{ this.isOk ? "Inicio de sesión correcto. Redirigiendo a la página principal" : "El correo y/o la contraseña no son correctos" }}</div>
-  </div>
-</div> -->
-
 <div class="main">
   <div class="forms-wrapper">
-    <form class="signin-form">
+    <form class="signin-form" [formGroup]="login" (ngSubmit)="onSubmit()">
       <a href="/" class="volver">Volver</a>
       <span>Iniciar sesión</span>
       <div class="inputs-wrapper">

@@ -4,12 +4,12 @@
   <br>
   <div class="container">
     <div class="row d-flex justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-5 g-3 div_img">
-      <ng-container *ngFor="let i of images">
+      <ng-container *ngFor="let i of pmayorista">
         <div class="card border-0">
-          <button type="button" class="btn btn-sm" [routerLink]="'/mayoristas/productos/1'"><img [src]="images[0]" alt="Producto" class="card-img-top rounded-circle"></button>
+          <button type="button" class="btn btn-sm" [routerLink]="'/mayoristas/'+i.id"><img [src]="i.imagen" alt="Producto" class="card-img-top rounded-circle"></button>
           <div class="card-body">
-            <p>Nombre del producto</p>
-            <p>Precio</p>
+            <p>{{ i.nombre }}</p>
+            <p>{{ i.precio }}€</p>
           </div>
         </div>
       </ng-container>

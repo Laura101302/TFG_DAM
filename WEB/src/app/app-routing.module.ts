@@ -21,7 +21,7 @@ const routes: Routes = [
     component: WholesalersComponent,
   },
   {
-    path: 'mayoristas/productos/1',
+    path: 'mayoristas/:id',
     component: ProductMayoristaComponent,
   },
   {
@@ -29,7 +29,7 @@ const routes: Routes = [
     component: IndividualsComponent,
   },
   {
-    path: 'particulares/productos/1',
+    path: 'particulares/:id',
     component: ProductParticularComponent,
   },
   {

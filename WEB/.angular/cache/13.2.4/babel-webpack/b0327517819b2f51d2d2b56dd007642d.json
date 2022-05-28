@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class PParticular {\n  constructor() {\n    this.id = 0;\n    this.nombre = null;\n    this.precio = 0;\n    this.descripcion = null;\n    this.imagen = null;\n    this.dnivendedor = null;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

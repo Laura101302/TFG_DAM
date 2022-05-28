@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PParticular } from 'src/app/models/pparticular.model';
+import { PParticularService } from 'src/app/services/pparticular.service';
 
 @Component({
   selector: 'app-particulares',
@@ -7,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParticularesComponent implements OnInit {
 
-  images = ['camiseta', 'pantalon', 'piano', 'portatil', 'sudadera'].map((n) => `/assets/images/particulares/${n}.jpg`);
+  pparticular: PParticular[] | null;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private _pparticularService: PParticularService) {
+    this.pparticular = null;
   }
 
+  ngOnInit(): void {
+    this._pparticularService
+      .getPParticularUnico()
+      .subscribe((x) => (this.pparticular = x));
+  }
 }

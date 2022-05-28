@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Usuario } from 'src/app/models/usuario.model';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-registro-usuario',
@@ -8,25 +10,23 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegistroUsuarioComponent implements OnInit {
 
-  isOk: boolean | null;
+  usuario: Usuario | null;
 
-  login = this.fb.group({
-    correo: ['', Validators.required],
-    contra: ['', Validators.required],
-  });
-
-  constructor(private fb: FormBuilder) {
-    this.isOk = null;
-  }
-
-  onSubmit() {
-    this.isOk =
-      this.login.value.correo == 'admin@gmail.com' &&
-      this.login.value.contra == 'pass';
-      setTimeout("location.href='/'", 3000);
+  constructor(private fb: FormBuilder, private _usuario: UsuarioService) {
+    this.usuario = null;
   }
 
   ngOnInit(): void {
   }
 
+  signupForm = this.fb.group({
+    nombre: ['', Validators.required],
+    correo: ['', Validators.required],
+    contra: ['', Validators.required],
+  });
+
+  onSubmit() {
+    this._usuario.postUsuarioData(this.signupForm.value);
+    setTimeout("location.href='/'", 3000);
+  }
 }

@@ -9,14 +9,17 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class InicioComponent {
 
+  images1: Array<String>;
+  images2: Array<String>;
+
   showNavigationArrows = false;
   showNavigationIndicators = false;
-  images1 = ['altavoz', 'lampara', 'mesa'].map((n) => `/assets/images/mayoristas/${n}.jpg`);
-  images2 = ['camiseta', 'pantalon', 'piano'].map((n) => `/assets/images/particulares/${n}.jpg`);
 
   constructor(config: NgbCarouselConfig) {
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
+    this.images1 = ['altavoz', 'lampara', 'mesa'].map((n) => `/assets/images/mayoristas/${n}.jpg`);
+    this.images2 = ['camiseta', 'pantalon', 'piano'].map((n) => `/assets/images/particulares/${n}.jpg`);
   }
 
   ngOnInit(): void {

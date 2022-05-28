@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { cookieHelper } from 'src/app/helper/cookiehelper';
+import { Usuario } from 'src/app/models/usuario.model';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -8,24 +11,35 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class InicioSesionComponent implements OnInit {
 
-  isOk: boolean | null;
+  usuario: Usuario | null;
 
   login = this.fb.group({
     correo: ['', Validators.required],
     contra: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {
-    this.isOk = null;
+  constructor(private fb: FormBuilder, private _usuario: UsuarioService, private cookie: cookieHelper) {
+    this.usuario = null;
   }
 
   onSubmit() {
-    this.isOk =
-      this.login.value.correo == 'admin@gmail.com' &&
-      this.login.value.contra == 'pass';
-      setTimeout("location.href='/'", 3000);
+    this._usuario.getUsuarioData(this.login.value.correo).subscribe((x) => (this.usuario = x) && this.comprobacion(x.nombreCompleto));
   }
 
   ngOnInit(): void {
+    if(this.cookie.getCookie() != ""){
+      setTimeout("location.href='/'")
+    }
+  }
+
+  comprobacion(nombre: string){
+    try{
+      if(this.login.value.contra == this.usuario?.contrasena){
+        this.cookie.setCookie(nombre);
+        setTimeout("location.href='/'")
+      }
+    }catch{
+      console.log("Usuario/Contraseña erróneo")
+    }
   }
 }

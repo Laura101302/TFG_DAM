@@ -1,5 +1,15 @@
-.main{
-  background: rgb(186, 255, 202);
+* {
+  color: white;
+}
+
+.main {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh; /*Ocupa toda la ventana en vertical*/
+  background: linear-gradient(rgba(31, 7, 7, .7), rgba(0, 0, 0, 0.7)),
+  url(/assets/images/otros/fondo-exito.jpg) center no-repeat;
+  background-size: cover;
+  perspective: 100rem;
 }
 
 .txtHecho{

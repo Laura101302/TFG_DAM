@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PMayorista } from 'src/app/models/pmayorista.model';
+import { PMayoristaService } from 'src/app/services/pmayorista.service';
 
 @Component({
   selector: 'app-mayoristas',
@@ -7,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MayoristasComponent implements OnInit {
 
-  images = ['altavoz', 'lampara', 'mesa', 'monitor', 'silla'].map((n) => `/assets/images/mayoristas/${n}.jpg`);
+  pmayorista: PMayorista[] | null;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private _pmayoristaService: PMayoristaService) {
+    this.pmayorista = null;
   }
 
+  ngOnInit(): void {
+    this._pmayoristaService
+      .getPMayorista()
+      .subscribe((x) => (this.pmayorista = x));
+  }
 }

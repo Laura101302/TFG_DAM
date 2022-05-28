@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Opinion {\n  constructor() {\n    this.id = 0;\n    this.nombre = null;\n    this.apellidos = null;\n    this.correoelectronico = null;\n    this.telefono = null;\n    this.comentario = null;\n    this.calificacion = 0;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -2,11 +2,11 @@
   <br>
   <h2>Sobre nosotros</h2>
   <img src="/assets/images/otros/logo.jpg" class="logo rounded">
-  <p>PopZone nace con la idea de unir en un mismo sitio web artículos nuevos y de segunda mano para facilitar al usuario la búsqueda del producto que más se adapte a sus necsidades y a sus gustos</p>
+  <p>PopZone nace con la idea de unir en un mismo sitio web artículos nuevos y de segunda mano para facilitar al usuario la búsqueda del producto que más se adapte a sus necsidades y a sus gustos.</p>
 
   <h2>Danos tu opinión</h2>
   <div>
-    <form class="form-floating" [formGroup]="opinionesForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <form class="form-floating" [formGroup]="opinionForm" (ngSubmit)="onSubmit()" autocomplete="off">
       <div class="row g-2">
         <div class="col-md">
           <div class="form-floating">
@@ -24,8 +24,8 @@
       <div class="row g-2">
         <div class="col-md">
           <div class="form-floating">
-            <input type="mail" id="email" placeholder="Email" required class="form-control" formControlName="Email">
-            <label for="email">Email</label>
+            <input type="mail" id="email" placeholder="Correo electrónico" required class="form-control" formControlName="CorreoElectronico">
+            <label for="email">Correo electrónico</label>
           </div>
         </div>
         <div class="col-md">
@@ -43,7 +43,7 @@
         <p>Valora nuestro sitio</p>
         <ngb-rating class="estrella" [max]="5" [(rate)]="currentRate"></ngb-rating>
       </div>
-      <button [disabled]="!opinionesForm.valid" class="btn btn-primary" type="submit">Enviar comentarios</button>
+      <button [disabled]="!opinionForm.valid" class="btn btn-primary" type="submit">Enviar comentarios</button>
     </form>
   </div>
   <br>
@@ -52,18 +52,12 @@
   <h2>Lo que opinan nuestros clientes</h2>
   <br>
   <div class="opiniones">
-    <article>
-      <p class="nombre">Nombre y apellidos</p>
-      <p>Comentario</p>
-    </article>
-    <article>
-      <p class="nombre">Nombre y apellidos</p>
-      <p>Comentario</p>
-    </article>
-    <article>
-      <p class="nombre">Nombre y apellidos</p>
-      <p>Comentario</p>
-    </article>
+    <ng-container *ngFor="let i of opinion">
+      <article>
+        <p class="nombre">{{ i.nombre + " " + i.apellidos }}</p>
+        <p>{{ i.comentario }}</p>
+      </article>
+    </ng-container>
   </div>
   <br>
 </div>

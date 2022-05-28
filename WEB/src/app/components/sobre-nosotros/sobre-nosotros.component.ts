@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Opinion } from 'src/app/models/opinion.model';
+import { OpinionService } from 'src/app/services/opinion.service';
 
 @Component({
   selector: 'app-sobre-nosotros',
@@ -7,28 +9,35 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./sobre-nosotros.component.css']
 })
 export class SobreNosotrosComponent implements OnInit {
-  currentRate: number;
 
-  constructor(private fb: FormBuilder, ) {
+  currentRate: number;
+  opinion: Opinion[] | null;
+
+  constructor(private fb: FormBuilder, private _opinion: OpinionService) {
     this.currentRate = 0;
+    this.opinion = null;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //Muestra las opiniones que hay en la base de datos
+    this._opinion
+      .getOpinionData()
+      .subscribe((x) => (this.opinion = x));
+  }
 
-  opinionesForm = this.fb.group({
+  opinionForm = this.fb.group({
     Nombre: ['', Validators.required],
     Apellidos: ['', Validators.required],
-    Email: ['', Validators.required],
+    CorreoElectronico: ['', Validators.required],
     Telefono: ['', Validators.required],
     Comentario: ['', Validators.required],
   });
 
   onSubmit() {
-    // this._opiniones.postOpinionesData(
-    //   this.opinionesForm.value,
-    //   this.currentRate
-    // );
-    window.location.reload();
-  }
+    this._opinion.postOpinionData(
+      this.opinionForm.value,
+      this.currentRate
+    );
 
+  }
 }

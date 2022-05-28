@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { cookieHelper } from 'src/app/helper/cookiehelper';
 
 @Component({
   selector: 'app-cabecera',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent implements OnInit {
 
-  constructor() { }
+  nombre: String | null;
+  isLogged: boolean;
 
-  ngOnInit(): void {
+  constructor(private _cookie: cookieHelper) {
+    this.nombre = null;
+    this.isLogged = true;
   }
 
+  ngOnInit(): void {
+    this.nombre = this._cookie.getCookie();
+    if(this.nombre == null || this.nombre == ""){
+      this.isLogged = false;
+    }
+  }
+
+  cerrarSesion(){
+    this._cookie.closeToken();
+    window.location.reload();
+  }
 }
