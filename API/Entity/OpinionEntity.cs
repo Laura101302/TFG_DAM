@@ -13,7 +13,7 @@ public class OpinionEntity
     public string Telefono { get; set; }
     [MaxLength(200)]
     public string Comentario { get; set; }
-    public string Calificacion { get; set; }
+    public int Calificacion { get; set; }
     [MaxLength(50)]
     public string CorreoElectronico { get; set; }
     public int ID { get; set; }

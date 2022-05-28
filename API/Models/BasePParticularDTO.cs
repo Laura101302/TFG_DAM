@@ -1,5 +1,5 @@
 /// <summary>
-/// Base DTO of ProductosParticulares
+/// Base DTO de ProductosParticulares
 /// </summary>
 public class BasePParticularDTO
 {
@@ -7,5 +7,5 @@ public class BasePParticularDTO
     public decimal Precio { get; set; }
     public string Descripcion { get; set; }
     public string Imagen { get; set; }
-    public string DNI_Vendedor { get; set; }
+    public int ID_Vendedor { get; set; }
 }

@@ -1,5 +1,5 @@
 /// <summary>
-/// DTO of ProductosParticulares
+/// DTO de ProductosParticulares
 /// </summary>
 public class PParticularDTO : BasePParticularDTO
 {

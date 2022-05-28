@@ -12,8 +12,7 @@ public class PParticularEntity
     public string Descripcion { get; set; }
     [MaxLength(100)]
     public string Imagen { get; set; }
-    [MaxLength(9)]
-    public string DNI_Vendedor { get; set; }
+    public int ID_Vendedor { get; set; }
     public int ID { get; set; }
 
 }

@@ -19,16 +19,16 @@
         </member>
         <member name="M:Api.Controllers.OpinionesController.Get(System.Int32)">
             <summary>
-            Devuelve una opinion por el email
+            Devuelve una opinion por el id
             </summary>
-            <param name="ID">El email de la opinion</param>
+            <param name="ID">El id de la opinion</param>
             <returns>Devuelve una opinion <see cref="T:OpinionDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.OpinionesController.Delete(System.Int32)">
             <summary>
             Borra una opinion
             </summary>
-            <param name="ID">El email de la opinion que se va a borrar</param>
+            <param name="ID">El id de la opinion que se va a borrar</param>
             <returns>Devuelve la opinion borrada <see cref="T:OpinionDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.OpinionesController.Post(BaseOpinionDTO)">
@@ -43,176 +43,176 @@
             Modifica una opinion
             </summary>
             <param name="baseOpinion">La opinion modificada <see cref="T:BaseOpinionDTO"/></param>
-            <param name="ID">El email de la opinion modificada</param>
+            <param name="ID">El id de la opinion modificada</param>
             <returns>Devuelve la opinion modificada <see cref="T:OpinionDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PMayoristasController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.PMayoristasController},IPMayoristaService)">
             <summary>
-            It creates a pmayoristaController
+            Crea pmayoristaController
             </summary>
-            <param name="logger">used for logging</param>
-            <param name="pmayoristaService">used for dealing with the pmayorista data</param>
+            <param name="logger">Loggin</param>
+            <param name="pmayoristaService">Tratado de Data</param>
         </member>
         <member name="M:Api.Controllers.PMayoristasController.Get">
             <summary>
-            Returns all the pmayoristas
+            Devuelve todos los pmayoristas
             </summary>
-            <returns>Returns a list of <see cref="T:PMayoristaDTO"/></returns>
+            <returns>Devuelve una lista <see cref="T:PMayoristaDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PMayoristasController.Get(System.Int32)">
             <summary>
-            It returns a pmayorista by id 
+            Devuelve un pmayorista por el id 
             </summary>
-            <param name="ID">the id of the pmayorista</param>
-            <returns>Returns a pmayorista <see cref="T:PMayoristaDTO"/></returns>
+            <param name="ID">el id del pmayorista</param>
+            <returns>Devuelve un pmayorista <see cref="T:PMayoristaDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PMayoristasController.Delete(System.Int32)">
             <summary>
-            it deletes a pmayorista
+            Borra un pmayorista
             </summary>
-            <param name="ID">the id of the pmayorista that is going to be deleted</param>
-            <returns>Returns the deleted pmayorista <see cref="T:PMayoristaDTO"/></returns>
+            <param name="ID">El id del pmayorista que se va a borrar</param>
+            <returns>Devuelve el pmayorista borrado <see cref="T:PMayoristaDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PMayoristasController.Post(BasePMayoristaDTO)">
             <summary>
-            It creates a pmayorista
+            Crea un pmayorista
             </summary>
-            <param name="basePMayorista">the created pmayorista <see cref="T:BasePMayoristaDTO"/></param>
-            <returns>Returns the created pmayorista <see cref="T:PMayoristaDTO"/></returns>
+            <param name="basePMayorista">El pmayorista creado <see cref="T:BasePMayoristaDTO"/></param>
+            <returns>Deuelve el pmayorista creado <see cref="T:PMayoristaDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PMayoristasController.Put(BasePMayoristaDTO,System.Int32)">
             <summary>
-            it modifies a pmayorista
+            Modifica un pmayorista
             </summary>
-            <param name="basePMayorista">the created pmayorista <see cref="T:BasePMayoristaDTO"/></param>
-            <param name="ID">the id of the modified pmayorista</param>
-            <returns>Returns the modified pmayorista <see cref="T:PMayoristaDTO"/></returns>
+            <param name="basePMayorista">El pmayorista modificado <see cref="T:BasePMayoristaDTO"/></param>
+            <param name="ID">El id del pmayorista modificado</param>
+            <returns>Devuelve el pmayorista modificado <see cref="T:PMayoristaDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PParticularesController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.PParticularesController},IPParticularService)">
             <summary>
-            It creates a pparticularController
+            Crea pparticularController
             </summary>
-            <param name="logger">used for logging</param>
-            <param name="pparticularService">used for dealing with the pparticular data</param>
+            <param name="logger">Loggin</param>
+            <param name="pparticularService">Tratado de Data</param>
         </member>
         <member name="M:Api.Controllers.PParticularesController.Get">
             <summary>
-            Returns all the pparticulars
+            Devuelve todos los pparticulares
             </summary>
-            <returns>Returns a list of <see cref="T:PParticularDTO"/></returns>
+            <returns>Devuelve una lista <see cref="T:PParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PParticularesController.Get(System.Int32)">
             <summary>
-            It returns a pparticular by id 
+            Devuelve un pparticular por el id 
             </summary>
-            <param name="ID">the id of the pparticular</param>
-            <returns>Returns a pparticular <see cref="T:PParticularDTO"/></returns>
+            <param name="ID">El id del pparticular</param>
+            <returns>Devuelve un pparticular <see cref="T:PParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PParticularesController.Delete(System.Int32)">
             <summary>
-            it deletes a pparticular
+            Borra un pparticular
             </summary>
-            <param name="ID">the id of the pparticular that is going to be deleted</param>
-            <returns>Returns the deleted pparticular <see cref="T:PParticularDTO"/></returns>
+            <param name="ID">El id del pparticular que se va a borrar</param>
+            <returns>Devuelve el pparticular borrado <see cref="T:PParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PParticularesController.Post(BasePParticularDTO)">
             <summary>
-            It creates a pparticular
+            Crea un pparticular
             </summary>
-            <param name="basePParticular">the created pparticular <see cref="T:BasePParticularDTO"/></param>
-            <returns>Returns the created pparticular <see cref="T:PParticularDTO"/></returns>
+            <param name="basePParticular">El pparticular creado <see cref="T:BasePParticularDTO"/></param>
+            <returns>Devuelve el pparticular creado <see cref="T:PParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.PParticularesController.Put(BasePParticularDTO,System.Int32)">
             <summary>
-            it modifies a pparticular
+            Modifica un pparticular
             </summary>
-            <param name="basePParticular">the created pparticular <see cref="T:BasePParticularDTO"/></param>
-            <param name="ID">the id of the modified pparticular</param>
-            <returns>Returns the modified pparticular <see cref="T:PParticularDTO"/></returns>
+            <param name="basePParticular">El pparticular modificado <see cref="T:BasePParticularDTO"/></param>
+            <param name="ID">El id del pparticular modificado</param>
+            <returns>Devuelve el pparticular modificado <see cref="T:PParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.UsuariosController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.UsuariosController},IUsuarioService)">
             <summary>
-            It creates a usuarioController
+            Crea usuarioController
             </summary>
-            <param name="logger">used for logging</param>
-            <param name="usuarioService">used for dealing with the usuario data</param>
+            <param name="logger">Loggin</param>
+            <param name="usuarioService">Tratado de Data</param>
         </member>
         <member name="M:Api.Controllers.UsuariosController.Get">
             <summary>
-            Returns all the usuarios
+            Devuelve todos los usuarios
             </summary>
-            <returns>Returns a list of <see cref="T:UsuarioDTO"/></returns>
+            <returns>Devuelve una lista <see cref="T:UsuarioDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.UsuariosController.Get(System.Int32)">
+        <member name="M:Api.Controllers.UsuariosController.Get(System.String)">
             <summary>
-            It returns a usuario by id 
+            Devuelve un usuario por el CorreoElectronico 
             </summary>
-            <param name="ID">the email of the usuario</param>
-            <returns>Returns a usuario <see cref="T:UsuarioDTO"/></returns>
+            <param name="CorreoElectronico">El CorreoElectronico del usuario</param>
+            <returns>Devuelve un usuario <see cref="T:UsuarioDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.UsuariosController.Delete(System.Int32)">
+        <member name="M:Api.Controllers.UsuariosController.Delete(System.String)">
             <summary>
-            it deletes a usuario
+            Borra un usuario
             </summary>
-            <param name="ID">the email of the usuario that is going to be deleted</param>
-            <returns>Returns the deleted usuario <see cref="T:UsuarioDTO"/></returns>
+            <param name="CorreoElectronico">El CorreoElectronico del usuario que se va a borrar</param>
+            <returns>Devuelve el usuario borrado <see cref="T:UsuarioDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.UsuariosController.Post(BaseUsuarioDTO)">
             <summary>
-            It creates a usuario
+            Crea un usuario
             </summary>
-            <param name="baseUsuario">the created usuario <see cref="T:BaseUsuarioDTO"/></param>
-            <returns>Returns the created usuario <see cref="T:UsuarioDTO"/></returns>
+            <param name="baseUsuario">El usuario creado <see cref="T:BaseUsuarioDTO"/></param>
+            <returns>Devuelve el usuario creado <see cref="T:UsuarioDTO"/></returns>
         </member>
-        <member name="M:Api.Controllers.UsuariosController.Put(BaseUsuarioDTO,System.Int32)">
+        <member name="M:Api.Controllers.UsuariosController.Put(BaseUsuarioDTO,System.String)">
             <summary>
-            it modifies a usuario
+            Modifica un usuario
             </summary>
-            <param name="baseUsuario">the created usuario <see cref="T:BaseUsuarioDTO"/></param>
-            <param name="ID">the email of the modified usuario</param>
-            <returns>Returns the modified usuario <see cref="T:UsuarioDTO"/></returns>
+            <param name="baseUsuario">El usuario modificado <see cref="T:BaseUsuarioDTO"/></param>
+            <param name="CorreoElectronico">El CorreoElectronico del usuario modificado</param>
+            <returns>Devuelve el usuario modificado <see cref="T:UsuarioDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.VParticularesController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.VParticularesController},IVParticularService)">
             <summary>
-            It creates a vparticularController
+            Crea vparticularController
             </summary>
-            <param name="logger">used for logging</param>
-            <param name="vparticularService">used for dealing with the vparticular data</param>
+            <param name="logger">Loggin</param>
+            <param name="vparticularService">Tratado de Data</param>
         </member>
         <member name="M:Api.Controllers.VParticularesController.Get">
             <summary>
-            Returns all the vparticulars
+            Devuelve todos los vparticulars
             </summary>
-            <returns>Returns a list of <see cref="T:VParticularDTO"/></returns>
+            <returns>Devuelve una lista <see cref="T:VParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.VParticularesController.Get(System.Int32)">
             <summary>
-            It returns a vparticular by id 
+            Devuelve un vparticular por el id 
             </summary>
-            <param name="ID">the dni of the vparticular</param>
-            <returns>Returns a vparticular <see cref="T:VParticularDTO"/></returns>
+            <param name="ID">El id del vparticular</param>
+            <returns>Devuelve un vparticular <see cref="T:VParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.VParticularesController.Delete(System.Int32)">
             <summary>
-            it deletes a vparticular
+            Borra un vparticular
             </summary>
-            <param name="ID">the dni of the vparticular that is going to be deleted</param>
-            <returns>Returns the deleted vparticular <see cref="T:VParticularDTO"/></returns>
+            <param name="ID">El id del vparticular que se va a borrar</param>
+            <returns>Devuelve el vparticular borrado <see cref="T:VParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.VParticularesController.Post(BaseVParticularDTO)">
             <summary>
-            It creates a vparticular
+            Crea un vparticular
             </summary>
-            <param name="baseVParticular">the created vparticular <see cref="T:BaseVParticularDTO"/></param>
-            <returns>Returns the created vparticular <see cref="T:VParticularDTO"/></returns>
+            <param name="baseVParticular">El vparticular creado <see cref="T:BaseVParticularDTO"/></param>
+            <returns>Devuelve el vparticular creado <see cref="T:VParticularDTO"/></returns>
         </member>
         <member name="M:Api.Controllers.VParticularesController.Put(BaseVParticularDTO,System.Int32)">
             <summary>
-            it modifies a vparticular
+            Modifica un vparticular
             </summary>
-            <param name="baseVParticular">the created vparticular <see cref="T:BaseVParticularDTO"/></param>
-            <param name="ID">the dni of the modified vparticular</param>
-            <returns>Returns the modified vparticular <see cref="T:VParticularDTO"/></returns>
+            <param name="baseVParticular">El vparticular modificado <see cref="T:BaseVParticularDTO"/></param>
+            <param name="ID">El id del vparticular modificado</param>
+            <returns>Devuelve el vparticular modificado <see cref="T:VParticularDTO"/></returns>
         </member>
         <member name="T:IOpinionService">
             <summary>
@@ -241,52 +241,52 @@
         </member>
         <member name="T:BaseOpinionDTO">
             <summary>
-            Base DTO of Opiniones
+            Base DTO de Opiniones
             </summary>
         </member>
         <member name="T:BasePMayoristaDTO">
             <summary>
-            Base DTO of ProductosMayoristas
+            Base DTO de ProductosMayoristas
             </summary>
         </member>
         <member name="T:BasePParticularDTO">
             <summary>
-            Base DTO of ProductosParticulares
+            Base DTO de ProductosParticulares
             </summary>
         </member>
         <member name="T:BaseUsuarioDTO">
             <summary>
-            Base DTO of Usuarios
+            Base DTO de Usuarios
             </summary>
         </member>
         <member name="T:BaseVParticularDTO">
             <summary>
-            Base DTO of VendedoresParticulares
+            Base DTO de VendedoresParticulares
             </summary>
         </member>
         <member name="T:OpinionDTO">
             <summary>
-            DTO of Opiniones
+            DTO de Opiniones
             </summary>
         </member>
         <member name="T:PMayoristaDTO">
             <summary>
-            DTO of ProductosMayoristas
+            DTO de ProductosMayoristas
             </summary>
         </member>
         <member name="T:PParticularDTO">
             <summary>
-            DTO of ProductosParticulares
+            DTO de ProductosParticulares
             </summary>
         </member>
         <member name="T:UsuarioDTO">
             <summary>
-            DTO of Usuarios
+            DTO de Usuarios
             </summary>
         </member>
         <member name="T:VParticularDTO">
             <summary>
-            DTO of VendedoresParticulares
+            DTO de VendedoresParticulares
             </summary>
         </member>
     </members>

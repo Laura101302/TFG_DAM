@@ -1,5 +1,5 @@
 /// <summary>
-/// Base DTO of Usuarios
+/// Base DTO de Usuarios
 /// </summary>
 public class BaseUsuarioDTO
 {

@@ -11,10 +11,10 @@ public class PParticularesController : ControllerBase
     private readonly IPParticularService _pparticularService;
 
     /// <summary>
-    /// It creates a pparticularController
+    /// Crea pparticularController
     /// </summary>
-    /// <param name="logger">used for logging</param>
-    /// <param name="pparticularService">used for dealing with the pparticular data</param>
+    /// <param name="logger">Loggin</param>
+    /// <param name="pparticularService">Tratado de Data</param>
     public PParticularesController(ILogger<PParticularesController> logger, IPParticularService pparticularService)
     {
         _logger = logger;
@@ -22,9 +22,9 @@ public class PParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Returns all the pparticulars
+    /// Devuelve todos los pparticulares
     /// </summary>
-    /// <returns>Returns a list of <see cref="PParticularDTO"/></returns>
+    /// <returns>Devuelve una lista <see cref="PParticularDTO"/></returns>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PParticularDTO))]
     public ActionResult<PParticularDTO> Get()
@@ -33,10 +33,10 @@ public class PParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// It returns a pparticular by id 
+    /// Devuelve un pparticular por el id 
     /// </summary>
-    /// <param name="ID">the id of the pparticular</param>
-    /// <returns>Returns a pparticular <see cref="PParticularDTO"/></returns>
+    /// <param name="ID">El id del pparticular</param>
+    /// <returns>Devuelve un pparticular <see cref="PParticularDTO"/></returns>
     [HttpGet("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -51,12 +51,11 @@ public class PParticularesController : ControllerBase
 
     }
 
-
     /// <summary>
-    /// it deletes a pparticular
+    /// Borra un pparticular
     /// </summary>
-    /// <param name="ID">the id of the pparticular that is going to be deleted</param>
-    /// <returns>Returns the deleted pparticular <see cref="PParticularDTO"/></returns>
+    /// <param name="ID">El id del pparticular que se va a borrar</param>
+    /// <returns>Devuelve el pparticular borrado <see cref="PParticularDTO"/></returns>
     [HttpDelete("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -75,10 +74,10 @@ public class PParticularesController : ControllerBase
 
 
     /// <summary>
-    /// It creates a pparticular
+    /// Crea un pparticular
     /// </summary>
-    /// <param name="basePParticular">the created pparticular <see cref="BasePParticularDTO"/></param>
-    /// <returns>Returns the created pparticular <see cref="PParticularDTO"/></returns>
+    /// <param name="basePParticular">El pparticular creado <see cref="BasePParticularDTO"/></param>
+    /// <returns>Devuelve el pparticular creado <see cref="PParticularDTO"/></returns>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PParticularDTO))]
     public ActionResult<PParticularDTO> Post([FromBody] BasePParticularDTO basePParticular)
@@ -88,11 +87,11 @@ public class PParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// it modifies a pparticular
+    /// Modifica un pparticular
     /// </summary>
-    /// <param name="basePParticular">the created pparticular <see cref="BasePParticularDTO"/></param>
-    /// <param name="ID">the id of the modified pparticular</param>
-    /// <returns>Returns the modified pparticular <see cref="PParticularDTO"/></returns>
+    /// <param name="basePParticular">El pparticular modificado <see cref="BasePParticularDTO"/></param>
+    /// <param name="ID">El id del pparticular modificado</param>
+    /// <returns>Devuelve el pparticular modificado <see cref="PParticularDTO"/></returns>
     [HttpPut("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PParticularDTO))]
     public ActionResult<PParticularDTO> Put([FromBody] BasePParticularDTO basePParticular, int ID)

@@ -1,5 +1,5 @@
 /// <summary>
-/// DTO of Opiniones
+/// DTO de Opiniones
 /// </summary>
 public class OpinionDTO : BaseOpinionDTO
 {

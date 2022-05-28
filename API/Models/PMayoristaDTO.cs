@@ -1,5 +1,5 @@
 /// <summary>
-/// DTO of ProductosMayoristas
+/// DTO de ProductosMayoristas
 /// </summary>
 public class PMayoristaDTO : BasePMayoristaDTO
 {

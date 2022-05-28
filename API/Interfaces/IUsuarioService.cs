@@ -8,11 +8,11 @@ public interface IUsuarioService
 {
     public IEnumerable<UsuarioDTO> GetAll();
 
-    public UsuarioDTO GetByID(int guid);
+    public UsuarioDTO GetByEmail(string guid);
 
     public UsuarioDTO Add(BaseUsuarioDTO guid);
 
-    public void Delete(int guid);
+    public void Delete(string guid);
 
-    public UsuarioDTO Modify(BaseUsuarioDTO usuario, int guid);
+    public UsuarioDTO Modify(BaseUsuarioDTO usuario, string guid);
 }

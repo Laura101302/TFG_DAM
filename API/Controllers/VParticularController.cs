@@ -11,10 +11,10 @@ public class VParticularesController : ControllerBase
     private readonly IVParticularService _vparticularService;
 
     /// <summary>
-    /// It creates a vparticularController
+    /// Crea vparticularController
     /// </summary>
-    /// <param name="logger">used for logging</param>
-    /// <param name="vparticularService">used for dealing with the vparticular data</param>
+    /// <param name="logger">Loggin</param>
+    /// <param name="vparticularService">Tratado de Data</param>
     public VParticularesController(ILogger<VParticularesController> logger, IVParticularService vparticularService)
     {
         _logger = logger;
@@ -22,9 +22,9 @@ public class VParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Returns all the vparticulars
+    /// Devuelve todos los vparticulars
     /// </summary>
-    /// <returns>Returns a list of <see cref="VParticularDTO"/></returns>
+    /// <returns>Devuelve una lista <see cref="VParticularDTO"/></returns>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     public ActionResult<VParticularDTO> Get()
@@ -33,10 +33,10 @@ public class VParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// It returns a vparticular by id 
+    /// Devuelve un vparticular por el id 
     /// </summary>
-    /// <param name="ID">the dni of the vparticular</param>
-    /// <returns>Returns a vparticular <see cref="VParticularDTO"/></returns>
+    /// <param name="ID">El id del vparticular</param>
+    /// <returns>Devuelve un vparticular <see cref="VParticularDTO"/></returns>
     [HttpGet("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -51,12 +51,11 @@ public class VParticularesController : ControllerBase
 
     }
 
-
     /// <summary>
-    /// it deletes a vparticular
+    /// Borra un vparticular
     /// </summary>
-    /// <param name="ID">the dni of the vparticular that is going to be deleted</param>
-    /// <returns>Returns the deleted vparticular <see cref="VParticularDTO"/></returns>
+    /// <param name="ID">El id del vparticular que se va a borrar</param>
+    /// <returns>Devuelve el vparticular borrado <see cref="VParticularDTO"/></returns>
     [HttpDelete("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -75,10 +74,10 @@ public class VParticularesController : ControllerBase
 
 
     /// <summary>
-    /// It creates a vparticular
+    /// Crea un vparticular
     /// </summary>
-    /// <param name="baseVParticular">the created vparticular <see cref="BaseVParticularDTO"/></param>
-    /// <returns>Returns the created vparticular <see cref="VParticularDTO"/></returns>
+    /// <param name="baseVParticular">El vparticular creado <see cref="BaseVParticularDTO"/></param>
+    /// <returns>Devuelve el vparticular creado <see cref="VParticularDTO"/></returns>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     public ActionResult<VParticularDTO> Post([FromBody] BaseVParticularDTO baseVParticular)
@@ -88,11 +87,11 @@ public class VParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// it modifies a vparticular
+    /// Modifica un vparticular
     /// </summary>
-    /// <param name="baseVParticular">the created vparticular <see cref="BaseVParticularDTO"/></param>
-    /// <param name="ID">the dni of the modified vparticular</param>
-    /// <returns>Returns the modified vparticular <see cref="VParticularDTO"/></returns>
+    /// <param name="baseVParticular">El vparticular modificado <see cref="BaseVParticularDTO"/></param>
+    /// <param name="ID">El id del vparticular modificado</param>
+    /// <returns>Devuelve el vparticular modificado <see cref="VParticularDTO"/></returns>
     [HttpPut("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     public ActionResult<VParticularDTO> Put([FromBody] BaseVParticularDTO baseVParticular, int ID)

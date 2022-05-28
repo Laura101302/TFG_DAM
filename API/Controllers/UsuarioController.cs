@@ -11,10 +11,10 @@ public class UsuariosController : ControllerBase
     private readonly IUsuarioService _usuarioService;
 
     /// <summary>
-    /// It creates a usuarioController
+    /// Crea usuarioController
     /// </summary>
-    /// <param name="logger">used for logging</param>
-    /// <param name="usuarioService">used for dealing with the usuario data</param>
+    /// <param name="logger">Loggin</param>
+    /// <param name="usuarioService">Tratado de Data</param>
     public UsuariosController(ILogger<UsuariosController> logger, IUsuarioService usuarioService)
     {
         _logger = logger;
@@ -22,9 +22,9 @@ public class UsuariosController : ControllerBase
     }
 
     /// <summary>
-    /// Returns all the usuarios
+    /// Devuelve todos los usuarios
     /// </summary>
-    /// <returns>Returns a list of <see cref="UsuarioDTO"/></returns>
+    /// <returns>Devuelve una lista <see cref="UsuarioDTO"/></returns>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuarioDTO))]
     public ActionResult<UsuarioDTO> Get()
@@ -33,16 +33,16 @@ public class UsuariosController : ControllerBase
     }
 
     /// <summary>
-    /// It returns a usuario by id 
+    /// Devuelve un usuario por el CorreoElectronico 
     /// </summary>
-    /// <param name="ID">the email of the usuario</param>
-    /// <returns>Returns a usuario <see cref="UsuarioDTO"/></returns>
-    [HttpGet("{ID}")]
+    /// <param name="CorreoElectronico">El CorreoElectronico del usuario</param>
+    /// <returns>Devuelve un usuario <see cref="UsuarioDTO"/></returns>
+    [HttpGet("{CorreoElectronico}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuarioDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public ActionResult<UsuarioDTO> Get(int ID)
+    public ActionResult<UsuarioDTO> Get(string CorreoElectronico)
     {
-        UsuarioDTO result = _usuarioService.GetByID(ID);
+        UsuarioDTO result = _usuarioService.GetByEmail(CorreoElectronico);
 
         if (result == null)
             return NotFound();
@@ -51,23 +51,22 @@ public class UsuariosController : ControllerBase
 
     }
 
-
     /// <summary>
-    /// it deletes a usuario
+    /// Borra un usuario
     /// </summary>
-    /// <param name="ID">the email of the usuario that is going to be deleted</param>
-    /// <returns>Returns the deleted usuario <see cref="UsuarioDTO"/></returns>
-    [HttpDelete("{ID}")]
+    /// <param name="CorreoElectronico">El CorreoElectronico del usuario que se va a borrar</param>
+    /// <returns>Devuelve el usuario borrado <see cref="UsuarioDTO"/></returns>
+    [HttpDelete("{CorreoElectronico}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuarioDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public ActionResult<UsuarioDTO> Delete(int ID)
+    public ActionResult<UsuarioDTO> Delete(String CorreoElectronico)
     {
-        UsuarioDTO result = _usuarioService.GetByID(ID);
+        UsuarioDTO result = _usuarioService.GetByEmail(CorreoElectronico);
 
         if (result == null)
             return NotFound();
 
-        _usuarioService.Delete(ID);
+        _usuarioService.Delete(CorreoElectronico);
 
         return Ok(result);
 
@@ -75,10 +74,10 @@ public class UsuariosController : ControllerBase
 
 
     /// <summary>
-    /// It creates a usuario
+    /// Crea un usuario
     /// </summary>
-    /// <param name="baseUsuario">the created usuario <see cref="BaseUsuarioDTO"/></param>
-    /// <returns>Returns the created usuario <see cref="UsuarioDTO"/></returns>
+    /// <param name="baseUsuario">El usuario creado <see cref="BaseUsuarioDTO"/></param>
+    /// <returns>Devuelve el usuario creado <see cref="UsuarioDTO"/></returns>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuarioDTO))]
     public ActionResult<UsuarioDTO> Post([FromBody] BaseUsuarioDTO baseUsuario)
@@ -88,17 +87,16 @@ public class UsuariosController : ControllerBase
     }
 
     /// <summary>
-    /// it modifies a usuario
+    /// Modifica un usuario
     /// </summary>
-    /// <param name="baseUsuario">the created usuario <see cref="BaseUsuarioDTO"/></param>
-    /// <param name="ID">the email of the modified usuario</param>
-    /// <returns>Returns the modified usuario <see cref="UsuarioDTO"/></returns>
-    [HttpPut("{ID}")]
+    /// <param name="baseUsuario">El usuario modificado <see cref="BaseUsuarioDTO"/></param>
+    /// <param name="CorreoElectronico">El CorreoElectronico del usuario modificado</param>
+    /// <returns>Devuelve el usuario modificado <see cref="UsuarioDTO"/></returns>
+    [HttpPut("{CorreoElectronico}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuarioDTO))]
-    public ActionResult<UsuarioDTO> Put([FromBody] BaseUsuarioDTO baseUsuario, int ID)
+    public ActionResult<UsuarioDTO> Put([FromBody] BaseUsuarioDTO baseUsuario, string CorreoElectronico)
     {
-
-        return Ok(_usuarioService.Modify(baseUsuario, ID));
+        return Ok(_usuarioService.Modify(baseUsuario, CorreoElectronico));
     }
 
 }

@@ -1,5 +1,5 @@
 /// <summary>
-/// Base DTO of VendedoresParticulares
+/// Base DTO de VendedoresParticulares
 /// </summary>
 public class BaseVParticularDTO
 {

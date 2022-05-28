@@ -33,9 +33,9 @@ public class OpinionesController : ControllerBase
     }
 
     /// <summary>
-    /// Devuelve una opinion por el email
+    /// Devuelve una opinion por el id
     /// </summary>
-    /// <param name="ID">El email de la opinion</param>
+    /// <param name="ID">El id de la opinion</param>
     /// <returns>Devuelve una opinion <see cref="OpinionDTO"/></returns>
     [HttpGet("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]
@@ -51,11 +51,10 @@ public class OpinionesController : ControllerBase
 
     }
 
-
     /// <summary>
     /// Borra una opinion
     /// </summary>
-    /// <param name="ID">El email de la opinion que se va a borrar</param>
+    /// <param name="ID">El id de la opinion que se va a borrar</param>
     /// <returns>Devuelve la opinion borrada <see cref="OpinionDTO"/></returns>
     [HttpDelete("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]
@@ -91,7 +90,7 @@ public class OpinionesController : ControllerBase
     /// Modifica una opinion
     /// </summary>
     /// <param name="baseOpinion">La opinion modificada <see cref="BaseOpinionDTO"/></param>
-    /// <param name="ID">El email de la opinion modificada</param>
+    /// <param name="ID">El id de la opinion modificada</param>
     /// <returns>Devuelve la opinion modificada <see cref="OpinionDTO"/></returns>
     [HttpPut("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]

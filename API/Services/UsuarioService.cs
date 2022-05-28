@@ -20,9 +20,9 @@ public class UsuarioService : IUsuarioService
         return _mapper.Map<UsuarioDTO>(entityAdded);
     }
 
-    public void Delete(int guid)
+    public void Delete(string guid)
     {
-        UsuarioEntity usuario = _context.Usuarios.FirstOrDefault(x => x.ID == guid);
+        UsuarioEntity usuario = _context.Usuarios.FirstOrDefault(x => x.CorreoElectronico == guid);
 
         if (usuario == null)
             throw new ApplicationException($"Usuario with email {guid} not found");
@@ -36,17 +36,24 @@ public class UsuarioService : IUsuarioService
         return _mapper.Map<IEnumerable<UsuarioDTO>>(_context.Usuarios.Select(x => x));
     }
 
-    public UsuarioDTO GetByID(int guid)
+    public UsuarioDTO GetByEmail(string guid)
     {
-        return _mapper.Map<UsuarioDTO>(_context.Usuarios.FirstOrDefault(x => x.ID == guid));
+        UsuarioDTO usuario = null;
+        try{
+            usuario = _mapper.Map<UsuarioDTO>(_context.Usuarios.FirstOrDefault(x => x.CorreoElectronico == guid));
+        }catch{
+            throw new Exception("Este email no existe en la base de datos");
+        }
+
+        return usuario;
     }
 
-    public UsuarioDTO Modify(BaseUsuarioDTO usuario, int guid)
+    public UsuarioDTO Modify(BaseUsuarioDTO usuario, string guid)
     {
         var _mappedUsuario = _mapper.Map<UsuarioEntity>(usuario);
-        _mappedUsuario.ID = guid;
+        _mappedUsuario.CorreoElectronico = guid;
 
-        UsuarioEntity modifiedUsuario = _context.Usuarios.FirstOrDefault(x => x.ID == guid);
+        UsuarioEntity modifiedUsuario = _context.Usuarios.FirstOrDefault(x => x.CorreoElectronico == guid);
 
         if (modifiedUsuario == null)
             return null;
