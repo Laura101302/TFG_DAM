@@ -12,6 +12,13 @@ export class RegistroUsuarioComponent implements OnInit {
 
   usuario: Usuario | null;
 
+  signup = this.fb.group({
+    nombre: ['', Validators.required],
+    correo: ['', Validators.required],
+    contra: ['', Validators.required],
+    biscontra: ['', Validators.required]
+  });
+
   constructor(private fb: FormBuilder, private _usuario: UsuarioService) {
     this.usuario = null;
   }
@@ -19,14 +26,21 @@ export class RegistroUsuarioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  signupForm = this.fb.group({
-    nombre: ['', Validators.required],
-    correo: ['', Validators.required],
-    contra: ['', Validators.required],
-  });
+  onSubmit() {;
+    this.comprobacion();
+  }
 
-  onSubmit() {
-    this._usuario.postUsuarioData(this.signupForm.value);
-    setTimeout("location.href='/'", 3000);
+  comprobacion(){
+    try{
+      if(this.signup.value.contra == this.signup.value.biscontra){
+        this._usuario.postUsuarioData(this.signup.value);
+        window.alert("Usuario creado correctamente\nPulse 'Aceptar' para volver a la página pricipal");
+        setTimeout("location.href='/'");
+      }else{
+        window.alert("Las contraseñas no coinciden");
+      }
+    }catch{
+      console.log("Las contraseñas no coinciden");
+    }
   }
 }

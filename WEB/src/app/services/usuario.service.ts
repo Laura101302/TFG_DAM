@@ -14,13 +14,13 @@ export class UsuarioService {
   }
 
   postUsuarioData(body : any) : Usuario {
-    let bodyData =new Usuario();
+    let bodyData = new Usuario();
     bodyData.nombreCompleto=body.nombre;
     bodyData.contrasena=body.contra;
     bodyData.correoElectronico=body.correo;
 
 
-    let result =new Usuario();
+    let result = new Usuario();
     this.http.post<Usuario>(environment.API_URL + 'usuarios',bodyData)
     .subscribe(
       (response) => {

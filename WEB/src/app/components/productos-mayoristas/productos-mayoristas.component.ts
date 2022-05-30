@@ -12,27 +12,30 @@ export class ProductosMayoristasComponent implements OnInit {
 
   pmayorista: PMayorista | null;
   id: number;
-  // nombre: string | null;
-  // precio: number;
-  // descripcion: string | null;
-  // imagen: string | null;
 
-
-  constructor(private _pmayoristaService: PMayoristaService, private activatedRoute: ActivatedRoute) {
+  constructor(private _pmayoristaService: PMayoristaService, private _activatedRoute: ActivatedRoute) {
     this.pmayorista = null;
     this.id = 0;
-    // this.nombre = null;
-    // this.precio = 0;
-    // this.descripcion = null;
-    // this.imagen = null;
   }
 
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe((parameters:any) => {
+    this._activatedRoute.paramMap.subscribe((parameters:any) => {
       this.id = parameters.get('id');
-      console.log(this.id)
+      console.log(this.id);
       this._pmayoristaService.getPMayoristaData(this.id).subscribe((x) => (this.pmayorista = x));
       this.pmayorista = parameters;
     });
+  }
+
+  onSubmit(id:number){
+    this.eliminar(id);
+  }
+
+  eliminar(id: number){
+    try{
+      this._pmayoristaService.deletePMayorista(id);
+    }catch{
+      console.log("No se ha podido eliminar");
+    }
   }
 }

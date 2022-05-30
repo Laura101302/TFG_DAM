@@ -13,7 +13,7 @@ export class PParticularService {
     return this.http.get<PParticular[]>(environment.API_URL + 'pparticulares');
   }
 
-  getPParticularData(id:number) : Observable<PParticular[]> {
-    return this.http.get<PParticular[]>(environment.API_URL + 'pparticulares/' + id);
+  getPParticularData(id:number) : Observable<PParticular> {
+    return this.http.get<PParticular>(environment.API_URL + 'pparticulares/' + id);
   }
 }

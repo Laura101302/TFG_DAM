@@ -1,7 +1,7 @@
 export class VParticular {
   id: number;
 
-  nombrecompleto: string | null;
+  nombreCompleto: string | null;
 
   informacion: string | null;
 
@@ -9,7 +9,7 @@ export class VParticular {
 
   constructor() {
     this.id = 0;
-    this.nombrecompleto = null;
+    this.nombreCompleto = null;
     this.informacion = null;
     this.dni = null;
   }

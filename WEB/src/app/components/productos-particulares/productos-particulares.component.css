@@ -1,25 +1,27 @@
 .producto {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.imagen {
-  width: 15em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  background-color: rgb(227, 236, 255);
 }
 
 .div_imagen {
   margin-top: 2em;
 }
 
+.imagen {
+  width: 15em;
+}
+
 .div_producto {
   margin-top: 2em;
 }
 
-.div_producto h3 {
+.div_producto h2 {
   text-align: center;
+  font-size: x-large;
   margin-bottom: 1em;
 }
 
-.vendedor{
-  text-align: center;
+.info{
+  background-color: rgb(227, 236, 255);
 }

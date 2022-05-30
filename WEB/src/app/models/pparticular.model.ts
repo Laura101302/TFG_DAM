@@ -9,7 +9,7 @@ export class PParticular {
 
   imagen: string | null;
 
-  dnivendedor: string | null;
+  idvendedor: string | null;
 
   constructor() {
     this.id = 0;
@@ -17,6 +17,6 @@ export class PParticular {
     this.precio = 0;
     this.descripcion = null;
     this.imagen = null;
-    this.dnivendedor = null;
+    this.idvendedor = null;
   }
 }

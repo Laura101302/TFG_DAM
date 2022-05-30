@@ -158,6 +158,9 @@ terms above.
 ng2-charts
 ISC
 
+ngx-cookie-service
+MIT
+
 rxjs
 Apache-2.0
                                Apache License

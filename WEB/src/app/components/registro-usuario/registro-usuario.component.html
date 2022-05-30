@@ -1,13 +1,13 @@
 <div class="main">
   <div class="forms-wrapper">
-    <form class="signin-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <form class="signin-form" [formGroup]="signup" (ngSubmit)="onSubmit()" autocomplete="off">
       <a href="/" class="volver">Volver</a>
       <span>Crear cuenta</span>
       <div class="inputs-wrapper">
         <input type="text" id="nombre" placeholder="Nombre completo" formControlName="nombre" required>
         <input type="email" id="correo" placeholder="Correo electrónico" formControlName="correo" required>
         <input type="password" id="contra" placeholder="Contraseña" formControlName="contra" required>
-        <input type="password" id="bispass" placeholder="Repita la contraseña" formControlName="bispass" required>
+        <input type="password" id="bispass" placeholder="Repita la contraseña" formControlName="biscontra" required>
         <input type="submit" class="botones" value="Crear cuenta">
         <br>
         <p>¿Ya tienes cuenta? ¡Inicia sesión!</p>

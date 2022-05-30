@@ -37,6 +37,9 @@ export class InicioSesionComponent implements OnInit {
       if(this.login.value.contra == this.usuario?.contrasena){
         this.cookie.setCookie(nombre);
         setTimeout("location.href='/'")
+        window.alert("Inicio de sesión correcto\nPulse 'Aceptar' para volver a la página principal");
+      }else{
+        window.alert("El usuario y/o la contraseña no son correctos");
       }
     }catch{
       console.log("Usuario/Contraseña erróneo")

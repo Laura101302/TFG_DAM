@@ -16,4 +16,8 @@ export class PMayoristaService {
   getPMayoristaData(id:number) : Observable<PMayorista> {
     return this.http.get<PMayorista>(environment.API_URL + 'pmayoristas/' + id);
   }
+
+  deletePMayorista(id:number) : Observable<PMayorista> {
+    return this.http.delete<PMayorista>(environment.API_URL + 'pmayoristas/' + id);
+  }
 }
