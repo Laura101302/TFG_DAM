@@ -11,7 +11,7 @@ public class OpinionesController : ControllerBase
     private readonly IOpinionService _opinionService;
 
     /// <summary>
-    /// Crea OpinionesController
+    /// Crea OpinionController
     /// </summary>
     /// <param name="logger">Loggin</param>
     /// <param name="opinionService">Tratado de Data</param>
@@ -33,10 +33,10 @@ public class OpinionesController : ControllerBase
     }
 
     /// <summary>
-    /// Devuelve una opinion por el id
+    /// Devuelve una opinión por el id
     /// </summary>
-    /// <param name="ID">El id de la opinion</param>
-    /// <returns>Devuelve una opinion <see cref="OpinionDTO"/></returns>
+    /// <param name="ID">El id de la opinión</param>
+    /// <returns>Devuelve una opinión <see cref="OpinionDTO"/></returns>
     [HttpGet("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -52,10 +52,10 @@ public class OpinionesController : ControllerBase
     }
 
     /// <summary>
-    /// Borra una opinion
+    /// Borra una opinión
     /// </summary>
-    /// <param name="ID">El id de la opinion que se va a borrar</param>
-    /// <returns>Devuelve la opinion borrada <see cref="OpinionDTO"/></returns>
+    /// <param name="ID">El id de la opinión que se va a borrar</param>
+    /// <returns>Devuelve la opinión borrada <see cref="OpinionDTO"/></returns>
     [HttpDelete("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -74,10 +74,10 @@ public class OpinionesController : ControllerBase
 
 
     /// <summary>
-    /// Crea una opinion
+    /// Crea una opinión
     /// </summary>
-    /// <param name="baseOpinion">La opinion creada <see cref="BaseOpinionDTO"/></param>
-    /// <returns>Devuelve la opinion creada <see cref="OpinionDTO"/></returns>
+    /// <param name="baseOpinion">La opinión creada <see cref="BaseOpinionDTO"/></param>
+    /// <returns>Devuelve la opinión creada <see cref="OpinionDTO"/></returns>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]
     public ActionResult<OpinionDTO> Post([FromBody] BaseOpinionDTO baseOpinion)
@@ -87,11 +87,11 @@ public class OpinionesController : ControllerBase
     }
 
     /// <summary>
-    /// Modifica una opinion
+    /// Modifica una opinión
     /// </summary>
-    /// <param name="baseOpinion">La opinion modificada <see cref="BaseOpinionDTO"/></param>
-    /// <param name="ID">El id de la opinion modificada</param>
-    /// <returns>Devuelve la opinion modificada <see cref="OpinionDTO"/></returns>
+    /// <param name="baseOpinion">La opinión modificada <see cref="BaseOpinionDTO"/></param>
+    /// <param name="ID">El id de la opinión modificada</param>
+    /// <returns>Devuelve la opinión modificada <see cref="OpinionDTO"/></returns>
     [HttpPut("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(OpinionDTO))]
     public ActionResult<OpinionDTO> Put([FromBody] BaseOpinionDTO baseOpinion, int ID)

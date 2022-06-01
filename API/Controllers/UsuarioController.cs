@@ -11,7 +11,7 @@ public class UsuariosController : ControllerBase
     private readonly IUsuarioService _usuarioService;
 
     /// <summary>
-    /// Crea usuarioController
+    /// Crea UsuarioController
     /// </summary>
     /// <param name="logger">Loggin</param>
     /// <param name="usuarioService">Tratado de Data</param>
@@ -33,9 +33,9 @@ public class UsuariosController : ControllerBase
     }
 
     /// <summary>
-    /// Devuelve un usuario por el CorreoElectronico 
+    /// Devuelve un usuario por el Correo Electronico 
     /// </summary>
-    /// <param name="CorreoElectronico">El CorreoElectronico del usuario</param>
+    /// <param name="CorreoElectronico">El Correo Electronico del usuario</param>
     /// <returns>Devuelve un usuario <see cref="UsuarioDTO"/></returns>
     [HttpGet("{CorreoElectronico}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuarioDTO))]
@@ -54,7 +54,7 @@ public class UsuariosController : ControllerBase
     /// <summary>
     /// Borra un usuario
     /// </summary>
-    /// <param name="CorreoElectronico">El CorreoElectronico del usuario que se va a borrar</param>
+    /// <param name="CorreoElectronico">El Correo Electronico del usuario que se va a borrar</param>
     /// <returns>Devuelve el usuario borrado <see cref="UsuarioDTO"/></returns>
     [HttpDelete("{CorreoElectronico}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuarioDTO))]
@@ -90,7 +90,7 @@ public class UsuariosController : ControllerBase
     /// Modifica un usuario
     /// </summary>
     /// <param name="baseUsuario">El usuario modificado <see cref="BaseUsuarioDTO"/></param>
-    /// <param name="CorreoElectronico">El CorreoElectronico del usuario modificado</param>
+    /// <param name="CorreoElectronico">El Correo Electronico del usuario modificado</param>
     /// <returns>Devuelve el usuario modificado <see cref="UsuarioDTO"/></returns>
     [HttpPut("{CorreoElectronico}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuarioDTO))]

@@ -11,7 +11,7 @@ public class PParticularesController : ControllerBase
     private readonly IPParticularService _pparticularService;
 
     /// <summary>
-    /// Crea pparticularController
+    /// Crea PParticularController
     /// </summary>
     /// <param name="logger">Loggin</param>
     /// <param name="pparticularService">Tratado de Data</param>
@@ -22,7 +22,7 @@ public class PParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Devuelve todos los pparticulares
+    /// Devuelve todos los productos de particulares
     /// </summary>
     /// <returns>Devuelve una lista <see cref="PParticularDTO"/></returns>
     [HttpGet]
@@ -33,10 +33,10 @@ public class PParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Devuelve un pparticular por el id 
+    /// Devuelve un producto de particular por el id 
     /// </summary>
-    /// <param name="ID">El id del pparticular</param>
-    /// <returns>Devuelve un pparticular <see cref="PParticularDTO"/></returns>
+    /// <param name="ID">El id del producto de particular</param>
+    /// <returns>Devuelve un producto de particular <see cref="PParticularDTO"/></returns>
     [HttpGet("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -52,10 +52,10 @@ public class PParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Borra un pparticular
+    /// Borra un producto de particular
     /// </summary>
-    /// <param name="ID">El id del pparticular que se va a borrar</param>
-    /// <returns>Devuelve el pparticular borrado <see cref="PParticularDTO"/></returns>
+    /// <param name="ID">El id del producto de particular que se va a borrar</param>
+    /// <returns>Devuelve el producto de particular borrado <see cref="PParticularDTO"/></returns>
     [HttpDelete("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -74,10 +74,10 @@ public class PParticularesController : ControllerBase
 
 
     /// <summary>
-    /// Crea un pparticular
+    /// Crea un producto de particular
     /// </summary>
-    /// <param name="basePParticular">El pparticular creado <see cref="BasePParticularDTO"/></param>
-    /// <returns>Devuelve el pparticular creado <see cref="PParticularDTO"/></returns>
+    /// <param name="basePParticular">El producto de particular creado <see cref="BasePParticularDTO"/></param>
+    /// <returns>Devuelve el producto de particular creado <see cref="PParticularDTO"/></returns>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PParticularDTO))]
     public ActionResult<PParticularDTO> Post([FromBody] BasePParticularDTO basePParticular)
@@ -87,11 +87,11 @@ public class PParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Modifica un pparticular
+    /// Modifica un producto de particular
     /// </summary>
-    /// <param name="basePParticular">El pparticular modificado <see cref="BasePParticularDTO"/></param>
-    /// <param name="ID">El id del pparticular modificado</param>
-    /// <returns>Devuelve el pparticular modificado <see cref="PParticularDTO"/></returns>
+    /// <param name="basePParticular">El producto de particular modificado <see cref="BasePParticularDTO"/></param>
+    /// <param name="ID">El id del producto de particular modificado</param>
+    /// <returns>Devuelve el producto de particular modificado <see cref="PParticularDTO"/></returns>
     [HttpPut("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PParticularDTO))]
     public ActionResult<PParticularDTO> Put([FromBody] BasePParticularDTO basePParticular, int ID)

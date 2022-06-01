@@ -11,7 +11,7 @@ public class VParticularesController : ControllerBase
     private readonly IVParticularService _vparticularService;
 
     /// <summary>
-    /// Crea vparticularController
+    /// Crea VParticularController
     /// </summary>
     /// <param name="logger">Loggin</param>
     /// <param name="vparticularService">Tratado de Data</param>
@@ -22,7 +22,7 @@ public class VParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Devuelve todos los vparticulars
+    /// Devuelve todos los vendedores particulares
     /// </summary>
     /// <returns>Devuelve una lista <see cref="VParticularDTO"/></returns>
     [HttpGet]
@@ -33,10 +33,10 @@ public class VParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Devuelve un vparticular por el id 
+    /// Devuelve un vendedor particular por el id 
     /// </summary>
-    /// <param name="ID">El id del vparticular</param>
-    /// <returns>Devuelve un vparticular <see cref="VParticularDTO"/></returns>
+    /// <param name="ID">El id del vendedor particular</param>
+    /// <returns>Devuelve un vendedor particular <see cref="VParticularDTO"/></returns>
     [HttpGet("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -52,10 +52,10 @@ public class VParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Borra un vparticular
+    /// Borra un vendedor particular
     /// </summary>
-    /// <param name="ID">El id del vparticular que se va a borrar</param>
-    /// <returns>Devuelve el vparticular borrado <see cref="VParticularDTO"/></returns>
+    /// <param name="ID">El id del vendedor particular que se va a borrar</param>
+    /// <returns>Devuelve el vendedor particular borrado <see cref="VParticularDTO"/></returns>
     [HttpDelete("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -74,10 +74,10 @@ public class VParticularesController : ControllerBase
 
 
     /// <summary>
-    /// Crea un vparticular
+    /// Crea un vendedor particular
     /// </summary>
-    /// <param name="baseVParticular">El vparticular creado <see cref="BaseVParticularDTO"/></param>
-    /// <returns>Devuelve el vparticular creado <see cref="VParticularDTO"/></returns>
+    /// <param name="baseVParticular">El vendedor particular creado <see cref="BaseVParticularDTO"/></param>
+    /// <returns>Devuelve el vendedor particular creado <see cref="VParticularDTO"/></returns>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     public ActionResult<VParticularDTO> Post([FromBody] BaseVParticularDTO baseVParticular)
@@ -87,11 +87,11 @@ public class VParticularesController : ControllerBase
     }
 
     /// <summary>
-    /// Modifica un vparticular
+    /// Modifica un vendedor particular
     /// </summary>
-    /// <param name="baseVParticular">El vparticular modificado <see cref="BaseVParticularDTO"/></param>
-    /// <param name="ID">El id del vparticular modificado</param>
-    /// <returns>Devuelve el vparticular modificado <see cref="VParticularDTO"/></returns>
+    /// <param name="baseVParticular">El vendedor particular modificado <see cref="BaseVParticularDTO"/></param>
+    /// <param name="ID">El id del vendedor particular modificado</param>
+    /// <returns>Devuelve el vendedor particular modificado <see cref="VParticularDTO"/></returns>
     [HttpPut("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VParticularDTO))]
     public ActionResult<VParticularDTO> Put([FromBody] BaseVParticularDTO baseVParticular, int ID)

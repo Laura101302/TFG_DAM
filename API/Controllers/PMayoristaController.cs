@@ -11,7 +11,7 @@ public class PMayoristasController : ControllerBase
     private readonly IPMayoristaService _pmayoristaService;
 
     /// <summary>
-    /// Crea pmayoristaController
+    /// Crea PMayoristaController
     /// </summary>
     /// <param name="logger">Loggin</param>
     /// <param name="pmayoristaService">Tratado de Data</param>
@@ -22,7 +22,7 @@ public class PMayoristasController : ControllerBase
     }
 
     /// <summary>
-    /// Devuelve todos los pmayoristas
+    /// Devuelve todos los productos de mayoristas
     /// </summary>
     /// <returns>Devuelve una lista <see cref="PMayoristaDTO"/></returns>
     [HttpGet]
@@ -33,10 +33,10 @@ public class PMayoristasController : ControllerBase
     }
 
     /// <summary>
-    /// Devuelve un pmayorista por el id 
+    /// Devuelve un producto de mayorista por el id
     /// </summary>
-    /// <param name="ID">el id del pmayorista</param>
-    /// <returns>Devuelve un pmayorista <see cref="PMayoristaDTO"/></returns>
+    /// <param name="ID">el id del producto de mayorista</param>
+    /// <returns>Devuelve un producto de mayorista <see cref="PMayoristaDTO"/></returns>
     [HttpGet("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PMayoristaDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -52,10 +52,10 @@ public class PMayoristasController : ControllerBase
     }
 
     /// <summary>
-    /// Borra un pmayorista
+    /// Borra un producto de mayorista
     /// </summary>
-    /// <param name="ID">El id del pmayorista que se va a borrar</param>
-    /// <returns>Devuelve el pmayorista borrado <see cref="PMayoristaDTO"/></returns>
+    /// <param name="ID">El id del producto de mayorista que se va a borrar</param>
+    /// <returns>Devuelve el producto de mayorista borrado <see cref="PMayoristaDTO"/></returns>
     [HttpDelete("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PMayoristaDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -74,10 +74,10 @@ public class PMayoristasController : ControllerBase
 
 
     /// <summary>
-    /// Crea un pmayorista
+    /// Crea un producto de mayorista
     /// </summary>
-    /// <param name="basePMayorista">El pmayorista creado <see cref="BasePMayoristaDTO"/></param>
-    /// <returns>Deuelve el pmayorista creado <see cref="PMayoristaDTO"/></returns>
+    /// <param name="basePMayorista">El producto de mayorista creado <see cref="BasePMayoristaDTO"/></param>
+    /// <returns>Deuelve el producto de mayorista creado <see cref="PMayoristaDTO"/></returns>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PMayoristaDTO))]
     public ActionResult<PMayoristaDTO> Post([FromBody] BasePMayoristaDTO basePMayorista)
@@ -87,11 +87,11 @@ public class PMayoristasController : ControllerBase
     }
 
     /// <summary>
-    /// Modifica un pmayorista
+    /// Modifica un producto de mayorista
     /// </summary>
-    /// <param name="basePMayorista">El pmayorista modificado <see cref="BasePMayoristaDTO"/></param>
-    /// <param name="ID">El id del pmayorista modificado</param>
-    /// <returns>Devuelve el pmayorista modificado <see cref="PMayoristaDTO"/></returns>
+    /// <param name="basePMayorista">El producto de mayorista modificado <see cref="BasePMayoristaDTO"/></param>
+    /// <param name="ID">El id del producto de mayorista modificado</param>
+    /// <returns>Devuelve el producto de mayorista modificado <see cref="PMayoristaDTO"/></returns>
     [HttpPut("{ID}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PMayoristaDTO))]
     public ActionResult<PMayoristaDTO> Put([FromBody] BasePMayoristaDTO basePMayorista, int ID)
