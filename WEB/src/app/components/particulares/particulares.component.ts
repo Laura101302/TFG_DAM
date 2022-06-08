@@ -17,7 +17,7 @@ export class ParticularesComponent implements OnInit {
 
   ngOnInit(): void {
     this._pparticularService
-      .getPParticularUnico()
+      .getPParticular()
       .subscribe((x) => (this.pparticular = x));
   }
 }

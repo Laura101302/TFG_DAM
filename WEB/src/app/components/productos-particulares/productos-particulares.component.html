@@ -5,14 +5,13 @@
     </div>
     <div class="col-sm-5 col-md-5 div_producto">
       <h2>{{ pparticular?.nombre }}</h2>
-      <ng-container>
-        <div class="card border-0 mx-auto info" style="width: 20rem;">
-          <p class="card-text">{{ pparticular?.precio }}€</p>
-          <button type="button" class="btn btn-primary" [routerLink]="'/exito'">Contactar ahora</button>
-          <hr>
-          <p>{{ pparticular?.descripcion }}</p>
-        </div>
-      </ng-container>
+      <div class="card border-0 mx-auto info" style="width: 20rem;">
+        <p class="card-text">{{ pparticular?.precio }}€</p>
+        <button type="button" (click)="eliminar()" class="btn btn-primary" [routerLink]="'/exito'" *ngIf="isLogged">Contactar ahora</button>
+        <button type="button" class="btn btn-primary" *ngIf="!isLogged" disabled>Inicia sesión para contactar</button>
+        <hr>
+        <p>{{ pparticular?.descripcion }}</p>
+      </div>
     </div>
   </div>
 </div>

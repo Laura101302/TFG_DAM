@@ -41,8 +41,9 @@ export class InicioSesionComponent implements OnInit {
       }else{
         window.alert("El usuario y/o la contraseña no son correctos");
       }
+
     }catch{
-      console.log("Usuario/Contraseña erróneo")
+      console.log("Usuario y/o contraseña incorrectos");
     }
   }
 }

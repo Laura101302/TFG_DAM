@@ -91,3 +91,14 @@ form span {
   text-align: center;
   color: #fff;
 }
+
+
+@media (max-width: 470px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+  }
+}

@@ -7,7 +7,8 @@
       <h2>{{ pmayorista?.nombre }}</h2>
         <div class="card border-0 mx-auto info" style="width: 20rem;">
           <p class="card-text">{{ pmayorista?.precio }}€</p>
-          <button type="submit({{ pmayorista?.id }})" class="btn btn-primary" [routerLink]="'/exito'">Comprar ahora</button>
+          <button type="button" (click)="eliminar()" class="btn btn-primary" [routerLink]="'/exito'" *ngIf="isLogged">Comprar ahora</button>
+          <button type="button" class="btn btn-primary" *ngIf="!isLogged" disabled>Inicia sesión para comprar</button>
           <hr>
           <p> {{ pmayorista?.descripcion }}</p>
         </div>
