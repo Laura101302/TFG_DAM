@@ -7,17 +7,17 @@ import { PParticular } from '../models/pparticular.model';
 @Injectable()
 export class PParticularService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private _http: HttpClient) {}
 
   getPParticular() : Observable<PParticular[]> {
-    return this.http.get<PParticular[]>(environment.API_URL + 'pparticulares');
+    return this._http.get<PParticular[]>(environment.API_URL + 'pparticulares');
   }
 
   getPParticularData(id:number) : Observable<PParticular> {
-    return this.http.get<PParticular>(environment.API_URL + 'pparticulares/' + id);
+    return this._http.get<PParticular>(environment.API_URL + 'pparticulares/' + id);
   }
 
   deletePParticular(id:number) : Observable<PParticular> {
-    return this.http.delete<PParticular>(environment.API_URL + 'pparticulares/' + id);
+    return this._http.delete<PParticular>(environment.API_URL + 'pparticulares/' + id);
   }
 }

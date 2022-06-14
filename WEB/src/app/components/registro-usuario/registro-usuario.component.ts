@@ -12,14 +12,14 @@ export class RegistroUsuarioComponent implements OnInit {
 
   usuario: Usuario | null;
 
-  signup = this.fb.group({
+  signup = this._fb.group({
     nombre: ['', Validators.required],
     correo: ['', Validators.required],
     contra: ['', Validators.required],
     biscontra: ['', Validators.required]
   });
 
-  constructor(private fb: FormBuilder, private _usuario: UsuarioService) {
+  constructor(private _fb: FormBuilder, private _usuario: UsuarioService) {
     this.usuario = null;
   }
 

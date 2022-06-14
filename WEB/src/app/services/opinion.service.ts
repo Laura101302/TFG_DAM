@@ -7,11 +7,11 @@ import { Opinion } from '../models/opinion.model';
 @Injectable()
 export class OpinionService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private _http: HttpClient) {}
 
   //Muestra las opiniones que hay en la base de datos
   getOpinionData() : Observable<Opinion[]> {
-    return this.http.get<Opinion[]>(environment.API_URL + 'opiniones');
+    return this._http.get<Opinion[]>(environment.API_URL + 'opiniones');
   }
 
   postOpinionData(body : any, rate : number) : Opinion {
@@ -27,7 +27,7 @@ export class OpinionService {
 
 
     let result = new Opinion();
-    this.http.post<Opinion>(environment.API_URL + 'opiniones',bodyData)
+    this._http.post<Opinion>(environment.API_URL + 'opiniones',bodyData)
     .subscribe(
       (response) => {
         console.log('response received')

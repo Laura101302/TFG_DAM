@@ -7,13 +7,13 @@ import { VParticular } from '../models/vparticular.model';
 @Injectable()
 export class VParticularService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private _http: HttpClient) {}
 
   getVParticularUnico() : Observable<VParticular[]> {
-    return this.http.get<VParticular[]>(environment.API_URL + 'vparticulares');
+    return this._http.get<VParticular[]>(environment.API_URL + 'vparticulares');
   }
 
   getVParticularData(id:number) : Observable<VParticular> {
-    return this.http.get<VParticular>(environment.API_URL + 'vparticulares/' + id);
+    return this._http.get<VParticular>(environment.API_URL + 'vparticulares/' + id);
   }
 }

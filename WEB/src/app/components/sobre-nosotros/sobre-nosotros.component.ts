@@ -13,7 +13,15 @@ export class SobreNosotrosComponent implements OnInit {
   currentRate: number;
   opinion: Opinion[] | null;
 
-  constructor(private fb: FormBuilder, private _opinion: OpinionService) {
+  opinionForm = this._fb.group({
+    Nombre: ['', Validators.required],
+    Apellidos: ['', Validators.required],
+    CorreoElectronico: ['', Validators.required],
+    Telefono: ['', Validators.required],
+    Comentario: ['', Validators.required],
+  });
+
+  constructor(private _fb: FormBuilder, private _opinion: OpinionService) {
     this.currentRate = 0;
     this.opinion = null;
   }
@@ -24,14 +32,6 @@ export class SobreNosotrosComponent implements OnInit {
       .getOpinionData()
       .subscribe((x) => (this.opinion = x));
   }
-
-  opinionForm = this.fb.group({
-    Nombre: ['', Validators.required],
-    Apellidos: ['', Validators.required],
-    CorreoElectronico: ['', Validators.required],
-    Telefono: ['', Validators.required],
-    Comentario: ['', Validators.required],
-  });
 
   onSubmit() {
     this._opinion.postOpinionData(

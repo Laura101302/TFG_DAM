@@ -7,10 +7,10 @@ import { Usuario } from '../models/usuario.model';
 @Injectable()
 export class UsuarioService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private _http: HttpClient) {}
 
   getUsuarioData(correo: String) : Observable<Usuario> {
-    return this.http.get<Usuario>(environment.API_URL + 'usuarios/'+correo);
+    return this._http.get<Usuario>(environment.API_URL + 'usuarios/'+correo);
   }
 
   postUsuarioData(body : any) : Usuario {
@@ -21,7 +21,7 @@ export class UsuarioService {
 
 
     let result = new Usuario();
-    this.http.post<Usuario>(environment.API_URL + 'usuarios',bodyData)
+    this._http.post<Usuario>(environment.API_URL + 'usuarios',bodyData)
     .subscribe(
       (response) => {
         console.log('response received')

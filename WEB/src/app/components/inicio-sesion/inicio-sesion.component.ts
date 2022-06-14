@@ -13,12 +13,12 @@ export class InicioSesionComponent implements OnInit {
 
   usuario: Usuario | null;
 
-  login = this.fb.group({
+  login = this._fb.group({
     correo: ['', Validators.required],
     contra: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder, private _usuario: UsuarioService, private cookie: cookieHelper) {
+  constructor(private _fb: FormBuilder, private _usuario: UsuarioService, private _cookie: cookieHelper) {
     this.usuario = null;
   }
 
@@ -27,7 +27,7 @@ export class InicioSesionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.cookie.getCookie() != ""){
+    if(this._cookie.getCookie() != ""){
       setTimeout("location.href='/'")
     }
   }
@@ -35,7 +35,7 @@ export class InicioSesionComponent implements OnInit {
   comprobacion(nombre: string){
     try{
       if(this.login.value.contra == this.usuario?.contrasena){
-        this.cookie.setCookie(nombre);
+        this._cookie.setCookie(nombre);
         setTimeout("location.href='/'")
         window.alert("Inicio de sesión correcto\nPulse 'Aceptar' para volver a la página principal");
       }else{

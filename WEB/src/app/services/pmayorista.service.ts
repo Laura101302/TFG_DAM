@@ -7,17 +7,17 @@ import { PMayorista } from '../models/pmayorista.model';
 @Injectable()
 export class PMayoristaService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private _http: HttpClient) {}
 
   getPMayorista(): Observable<PMayorista[]> {
-    return this.http.get<PMayorista[]>(environment.API_URL + 'pmayoristas');
+    return this._http.get<PMayorista[]>(environment.API_URL + 'pmayoristas');
   }
 
   getPMayoristaData(id:number) : Observable<PMayorista> {
-    return this.http.get<PMayorista>(environment.API_URL + 'pmayoristas/' + id);
+    return this._http.get<PMayorista>(environment.API_URL + 'pmayoristas/' + id);
   }
 
   deletePMayorista(id:number) : Observable<PMayorista> {
-    return this.http.delete<PMayorista>(environment.API_URL + 'pmayoristas/' + id);
+    return this._http.delete<PMayorista>(environment.API_URL + 'pmayoristas/' + id);
   }
 }
