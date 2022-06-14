@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/laura/Escritorio/TFG/PopZone/API/Api.csproj": {}
+    "/home/laura/Escritorio/Practicas/TFG/PopZone/API/Api.csproj": {}
   },
   "projects": {
-    "/home/laura/Escritorio/TFG/PopZone/API/Api.csproj": {
+    "/home/laura/Escritorio/Practicas/TFG/PopZone/API/Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/laura/Escritorio/TFG/PopZone/API/Api.csproj",
+        "projectUniqueName": "/home/laura/Escritorio/Practicas/TFG/PopZone/API/Api.csproj",
         "projectName": "Api",
-        "projectPath": "/home/laura/Escritorio/TFG/PopZone/API/Api.csproj",
+        "projectPath": "/home/laura/Escritorio/Practicas/TFG/PopZone/API/Api.csproj",
         "packagesPath": "/home/laura/.nuget/packages/",
-        "outputPath": "/home/laura/Escritorio/TFG/PopZone/API/obj/",
+        "outputPath": "/home/laura/Escritorio/Practicas/TFG/PopZone/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/laura/.nuget/NuGet/NuGet.Config"
